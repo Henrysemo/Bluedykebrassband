@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://henry-portfolio-fawn-vercel.app/sitemap.xml
+Sitemap: https://bluedykebrassband.onrender.com/sitemap.xml

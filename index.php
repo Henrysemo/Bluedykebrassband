@@ -551,7 +551,7 @@
                     </div>
                     <div class="card member-card tuba-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/tuba.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/charity.jpeg" alt="Charity"></div>
 
                         <h3>Charity</h3>
                         <p class="member-aka">"Charii"</p>
@@ -809,7 +809,7 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Trumpet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/obed.jpg" alt="Obed Ndalu">
+                        <div class="member-avatar"><img src="assets/images/Member Images/obed.jpeg" alt="Obed Ndalu">
                         </div>
 
                         <h3>Obed Ndalu</h3>

@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -47,6 +47,7 @@
     if (year) {
         year.textContent = new Date().getFullYear();
     }
+
 });
 
 const backToTop = document.querySelector(".back-to-top");

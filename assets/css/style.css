@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --primary-color: #0F6BFF;      /* Deep Blue */
     --secondary-color: #1D5CFF;    /* Bright Blue */
     --accent-color: #FBBF24;       /* Brass Gold */
@@ -10,6 +10,33 @@
     --text-light: #CBD5E1;          /* Secondary Text */
     --text-muted: #94A3B8;          /* Muted Text */
     --border-color: rgba(255,255,255,0.12);
+    --nav-height: 76px;
+}
+
+@font-face {
+    font-family: 'Futura Local';
+    src: local('Futura'), local('Futura PT'), local('Futura Bk BT'), local('Futura Md BT');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Local';
+    src: url('assets/fonts/FuturaPTBook.woff2') format('woff2'),
+         url('assets/fonts/FuturaPTBook.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Local';
+    src: url('assets/fonts/FuturaPTMedium.woff2') format('woff2'),
+         url('assets/fonts/FuturaPTMedium.woff') format('woff');
+    font-weight: 500 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -20,10 +47,11 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-height) + 20px);
 }
 
 body {
-    font-family: 'Futura Bk BT', 'Futura Bk', 'Inter', 'Trebuchet MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Futura Local', 'Avenir Next', 'Segoe UI', 'Trebuchet MS', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background:
@@ -34,6 +62,7 @@ body {
     background-attachment: fixed;
     overflow-x: hidden;
     position: relative;
+    padding-top: var(--nav-height);
 }
 
 body::before {
@@ -158,9 +187,12 @@ svg {
 .navbar {
     background: rgba(8, 26, 45, 0.92);
     box-shadow: 0 2px 12px rgba(15, 107, 255, 0.16);
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    z-index: 1100;
     border-bottom: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
 }
@@ -169,7 +201,8 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0 clamp(1rem, 3.2vw, 2rem);
+    height: 100%;
 }
 
 .brand {
@@ -1019,10 +1052,10 @@ svg {
 
 .members-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    gap:5.0rem 2rem; /* row gap, column gap */
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:4rem 1.5rem; /* row gap, column gap */
     align-items:start;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .about-grid{
 
@@ -1211,6 +1244,8 @@ svg {
     border-radius: 18px;
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -1326,37 +1361,53 @@ svg {
 
 .member-about {
     font-size: 0.95rem;
+    line-height: 1.45;
     color: var(--text-light);
-    opacity:0;
-    max-height:0;
-    overflow:hidden;
-    transition:.35s;
+    opacity: 0;
+    min-height: 4.2em;
+    max-height: 4.2em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    transition: opacity .35s ease, max-height .35s ease;
 }
 .member-card:hover .member-about{
     opacity:1;
-    max-height:180px;
+    max-height: 4.2em;
 }
 .member-social{
     display:flex;
     justify-content:center;
-    gap:15px;
-    margin-top:20px;
+    gap:8px;
+    margin-top:18px;
+    flex-wrap:nowrap;
+    overflow:hidden;
 }
 
 .member-social a{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background: var(--primary-color);
-    color:white;
-    display:flex;
+    display:inline-flex;
     align-items:center;
     justify-content:center;
-    transition:.3s;
+    width:34px;
+    min-width:34px;
+    height:34px;
+    min-height:34px;
+    padding:0;
+    border-radius:10px;
+    background: var(--primary-color);
+    color:white;
+    transition:.18s;
+    flex: 0 0 auto;
+}
+
+.member-social a i {
+    font-size: 0.9rem;
+    line-height: 1;
 }
 
 .member-social a:hover{
-    transform:translateY(-5px) scale(1.15);
+    transform:translateY(-2px) scale(1.08);
     background: var(--primary-color);
     color: #ffffff;
 }
@@ -1377,6 +1428,8 @@ svg {
     cursor: pointer;
     background-color: rgba(7, 17, 31, 0.9);
     background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
     color: #fff;
 }
 
@@ -1385,8 +1438,8 @@ svg {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(7, 17, 31, 0.2), rgba(15, 107, 255, 0.18));
-    opacity: 0.75;
+    background: linear-gradient(135deg, rgba(7, 17, 31, 0.34), rgba(15, 107, 255, 0.18));
+    opacity: 0.8;
     transition: 0.35s ease;
     pointer-events: none;
     z-index: 0;
@@ -1394,7 +1447,7 @@ svg {
 
 .repertoire-card:hover,
 .join-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.01);
     border-color: rgba(251, 191, 36, 0.45);
     box-shadow: 0 20px 45px rgba(29, 78, 216, 0.18);
 }
@@ -1475,8 +1528,11 @@ svg {
 
 .event-card{
 
+    position: relative;
+    overflow: hidden;
     background:rgba(255,255,255,.05);
-
+    background-size: cover;
+    background-position: center;
     border:1px solid rgba(255,255,255,.08);
 
     border-radius:22px;
@@ -1490,12 +1546,26 @@ svg {
     transition:.35s;
 
     backdrop-filter:blur(14px);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
 
+}
+
+.event-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(7, 17, 31, 0.7), rgba(15, 107, 255, 0.26));
+    z-index: 0;
+}
+
+.event-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .event-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-8px) scale(1.01);
 
     border-color:#FBBF24;
 
@@ -1599,6 +1669,115 @@ svg {
 
 }
 
+/* ===============================
+   Responsive & Touch Device Fixes
+   - Disable hover transforms on touch devices
+   - Make avatars and social icons scale on small screens
+   - Reduce large touch-activated scaling that persists on mobile
+=================================== */
+
+@media (hover: none), (pointer: coarse) {
+    .member-card:hover,
+    .member-card:active,
+    .member-card:focus {
+        transform: none !important;
+        box-shadow: none !important;
+        border-color: rgba(255,255,255,0.04) !important;
+    }
+
+    .member-avatar {
+        transform: translateX(-50%) !important;
+    }
+
+    .photo-card:hover,
+    .stat-card:hover,
+    .highlight-card:hover,
+    .btn:hover,
+    .value-card:hover,
+    .repertoire-card:hover,
+    .join-card:hover,
+    .event-card:hover,
+    .member-social a:hover {
+        transform: none !important;
+    }
+}
+
+/* Responsive avatar sizing */
+.member-avatar{
+    width: clamp(64px, 14vw, 8.4rem);
+    height: clamp(64px, 14vw, 8.4rem);
+    top: calc(-0.5 * clamp(64px, 14vw, 8.4rem));
+}
+
+@media (max-width: 768px) {
+    .members-grid { gap: 2.5rem 1rem; margin-top: 3.5rem; }
+    .member-card { padding: 5rem 1rem 1rem; margin-top: 3rem; min-height: auto; }
+    .member-card h3 { margin-top: 1.8rem; font-size: 1.05rem; }
+    .member-about { max-height: 220px; }
+    .member-social { gap: 8px; margin-top: 14px; }
+    .member-social a { width: 32px; min-width: 32px; height: 32px; min-height: 32px; border-radius: 9px; }
+    .member-social a i { font-size: 0.85rem; }
+}
+
+@media (max-width: 420px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero { min-height: auto; padding-top: 2rem; padding-bottom: 2rem; }
+    .hero-stats { grid-template-columns: repeat(2,1fr); }
+    .hero-highlights { grid-template-columns: 1fr; }
+    .member-avatar { width: 64px; height: 64px; top: -32px; }
+    .member-card { padding-top: 3.6rem; margin-top: 2rem; }
+    .member-social a { width: 30px; min-width: 30px; height: 30px; min-height: 30px; }
+    .member-social a i { font-size: 0.8rem; }
+    .nav-menu { display: none; }
+    .hamburger { display: flex; }
+}
+
+/* remove any accidental horizontal overflow and tighten container padding on small screens */
+@media (max-width: 640px) {
+    html, body { width: 100%; overflow-x: hidden; }
+    .container { padding-left: clamp(0.75rem, 4vw, 1rem); padding-right: clamp(0.75rem, 4vw, 1rem); }
+    .members-grid { grid-template-columns: 1fr; gap: 2.25rem; margin-top: 2.5rem; }
+}
+
+/* Social icons - more consistent pill-shaped buttons like the screenshot */
+.member-social a{
+    width:34px;
+    min-width:34px;
+    height:34px;
+    min-height:34px;
+    padding:0;
+    border-radius:10px;
+    background: var(--primary-color);
+    color:white;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.18), 0 6px 12px rgba(15,107,255,0.08);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.member-social a i{ font-size:0.9rem; }
+
+@media (hover: hover) and (pointer: fine) {
+    .member-social a:hover{ transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,0.2); }
+}
+
+/* Smaller-screen social icon scaling */
+@media (max-width: 768px) {
+    .member-social { gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .member-social a { width: 32px; min-width: 32px; height: 32px; min-height: 32px; padding: 0; border-radius: 9px; }
+    .member-social a i { font-size: 0.82rem; }
+}
+
+@media (max-width: 420px) {
+    .member-social { gap: 8px; }
+    .member-social a { min-width: 36px; height: 36px; padding: 0 6px; border-radius: 8px; }
+    .member-social a i { font-size: 0.88rem; }
+    .member-social { justify-content: center; }
+}
+
+
+
 .event-link:hover{
 
     gap:.9rem;
@@ -1629,6 +1808,10 @@ svg {
 .text-link {
     color: var(--primary-color);
     font-weight: 700;
+}
+
+.gallery-carousel {
+    position: relative;
 }
 
 .gallery-grid {
@@ -2502,13 +2685,21 @@ svg {
 }
 
 @media (max-width: 720px) {
+    .section {
+        overflow: hidden;
+    }
+
+    .section-watermark {
+        display: none;
+    }
+
     .hamburger {
         display: flex;
     }
 
     .nav-menu {
         position: absolute;
-        top: 72px;
+        top: var(--nav-height);
         left: 1rem;
         right: 1rem;
         display: flex;
@@ -2529,7 +2720,6 @@ svg {
     .hero-highlights,
     .repertoire-grid,
     .join-grid,
-    .gallery-grid,
     .events-grid {
         grid-template-columns: 1fr;
     }
@@ -2725,11 +2915,33 @@ svg {
     }
 
     .about-stats{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
     }
 
     .about-values{
         grid-template-columns:1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+    }
+
+    .about-stats div {
+        padding: 1rem 0.8rem;
+    }
+
+    .about-stats h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .about-stats p {
+        font-size: 0.72rem;
+        line-height: 1.3;
     }
 }
 .testimonial-grid {
@@ -2739,12 +2951,29 @@ svg {
 }
 
 .testimonial-card {
+    position: relative;
+    overflow: hidden;
     padding: 1.6rem;
     border-radius: 22px;
+    background-size: cover;
+    background-position: center;
     background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(15,107,255,0.12));
     border: 1px solid rgba(255,255,255,0.12);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonial-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(7, 17, 31, 0.55), rgba(15, 107, 255, 0.18));
+    z-index: 0;
+}
+
+.testimonial-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .testimonial-card:hover {
@@ -2794,7 +3023,7 @@ svg {
     }
 
     .floating-buttons {
-        display: none;
+        display: flex;
     }
 }
 
@@ -2847,9 +3076,8 @@ svg {
 }
 .footer-grid{
 
-    grid-template-columns:1fr;
-
-    text-align:center;
+    grid-template-columns: repeat(2, 1fr);
+    text-align:left;
 
 }
 
@@ -2992,11 +3220,66 @@ svg {
     .stat-card p{
         font-size:.8rem;
     }
+    .gallery-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 0.9rem;
+    }
+
+    .gallery-control {
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(15, 107, 255, 0.18);
+        color: #fff;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .gallery-control:active {
+        transform: scale(0.96);
+    }
+
     .gallery-grid{
+        display: flex;
+        grid-template-columns: none;
+        gap: 0.9rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.25rem 0.25rem 0.75rem;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255,255,255,0.35) transparent;
+    }
 
-    grid-template-columns:1fr;
+    .gallery-grid::-webkit-scrollbar {
+        height: 6px;
+    }
 
-}
+    .gallery-grid::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.28);
+        border-radius: 999px;
+    }
+
+    .gallery-item {
+        flex: 0 0 82%;
+        min-height: 260px;
+        scroll-snap-align: start;
+    }
+
+    .gallery-item.wide,
+    .gallery-item.tall {
+        grid-column: auto;
+        grid-row: auto;
+    }
     .about-stats{
         grid-template-columns:1fr;
     }

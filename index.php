@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Dyke Brassband | Eldoret | Making Moments Musical</title>
+    <title>Blue Dyke Brass Band |Brass Band in Eldoret,Kenya</title>
     <meta name="description"
         content="Blue Dyke Brassband Eldoret brings passionate brass performances for concerts, church events, parades, weddings and community celebrations.">
     <meta name="keywords"

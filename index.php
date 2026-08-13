@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Dyke Brass Band |Brass Band in Eldoret,Kenya</title>
-   <meta name="description" content="Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.">
-   <meta name="author" content="Blue Dyke Brass Band">
-<meta name="language" content="English">
-<meta name="revisit-after" content="7 days">
+    <title>Blue Dyke Brassband | Eldoret | Making Moments Musical</title>
+    <meta name="description"
+        content="Blue Dyke Brassband Eldoret brings passionate brass performances for concerts, church events, parades, weddings and community celebrations.">
     <meta name="keywords"
         content="Blue Dyke Brassband, brass band Eldoret, brass performance Kenya, wedding band Eldoret, church brass band">
     <meta name="author" content="Blue Dyke Brassband">
@@ -19,61 +17,15 @@
     <link href="https://fonts.cdnfonts.com/css/futura-bk" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="canonical" href="https://bluedykebrassband.onrender.com/">
-   <meta property="og:type" content="website">
-<meta property="og:site_name" content="Blue Dyke Brass Band">
-<meta property="og:title" content="Blue Dyke Brass Band | Brass Band in Eldoret, Kenya">
-<meta property="og:description" content="Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.">
-<meta property="og:url" content="https://bluedykebrassband.onrender.com/">
-<meta property="og:image" content="https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg">
-<meta property="og:image:alt" content="Blue Dyke Brass Band in Eldoret, Kenya">
-   <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blue Dyke Brass Band | Brass Band in Eldoret, Kenya">
-<meta name="twitter:description" content="Blue Dyke Brass Band provides live brass music for weddings, church services, concerts, parades, graduations and community events in Eldoret and across Kenya.">
-<meta name="twitter:image" content="https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg">
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "Blue Dyke Brass Band",
-    "alternateName": "Blue Dyke Brassband",
-    "url": "https://bluedykebrassband.onrender.com/",
-    "logo": "https://bluedykebrassband.onrender.com/assets/images/logo.png",
-    "image": "https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg",
-    "description": "Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.",
-    "genre": [
-        "Brass Band",
-        "Brass Music",
-        "Live Music"
-    ],
-    "location": {
-        "@type": "Place",
-        "name": "Eldoret, Kenya",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Eldoret",
-            "addressCountry": "KE"
-        }
-    },
-    "sameAs": [
-        "https://www.facebook.com/profile.php?id=61593338960381",
-        "https://www.instagram.com/bluedykebrassband",
-        "https://youtube.com/@bluedykebrassband",
-        "https://www.tiktok.com/@bluedykebrassband"
-    ]
-}
-</script>
 </head>
 
 <body>
     <?php
     $contactStatus = '';
     $contactMessage = '';
-    $contactToEmail = 'bluedykebrass@gmail.com';
-    $contactFromEmail = 'no-reply@bluedykebrassband.com';
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_name'])) {
+        $to = 'bluedykebrass@gmail.com';
         $name = trim($_POST['contact_name'] ?? '');
         $email = trim($_POST['contact_email'] ?? '');
         $subject = trim($_POST['contact_subject'] ?? '');
@@ -85,32 +37,26 @@
         } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $contactStatus = 'error';
             $contactMessage = 'Please provide a valid email address.';
-        } elseif (!function_exists('mail')) {
-            $contactStatus = 'error';
-            $contactMessage = 'Email sending is not available on this server. Please contact us directly at bluedykebrass@gmail.com.';
         } else {
             $subjectLine = $subject !== '' ? $subject : 'New message from Blue Dyke Brassband website';
-            $body = '<!DOCTYPE html><html><body>'
-                . '<h3>New message from Blue Dyke Brassband website</h3>'
-                . '<p><strong>Name:</strong> ' . htmlspecialchars($name, ENT_QUOTES, 'UTF-8') . '</p>'
-                . '<p><strong>Email:</strong> ' . htmlspecialchars($email, ENT_QUOTES, 'UTF-8') . '</p>'
-                . '<p><strong>Subject:</strong> ' . htmlspecialchars($subjectLine, ENT_QUOTES, 'UTF-8') . '</p>'
-                . '<p><strong>Message:</strong><br>' . nl2br(htmlspecialchars($messageText, ENT_QUOTES, 'UTF-8')) . '</p>'
-                . '</body></html>';
+            $body = "<h3>New message from Blue Dyke Brassband website</h3>"
+                . "<p><strong>Name:</strong> " . htmlspecialchars($name, ENT_QUOTES, 'UTF-8') . "</p>"
+                . "<p><strong>Email:</strong> " . htmlspecialchars($email, ENT_QUOTES, 'UTF-8') . "</p>"
+                . "<p><strong>Subject:</strong> " . htmlspecialchars($subjectLine, ENT_QUOTES, 'UTF-8') . "</p>"
+                . "<p><strong>Message:</strong><br>" . nl2br(htmlspecialchars($messageText, ENT_QUOTES, 'UTF-8')) . "</p>";
 
             $headers = [];
-            $headers[] = 'From: Blue Dyke Brassband <' . $contactFromEmail . '>';
-            $headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
+            $headers[] = 'From: ' . $name . ' <' . $email . '>';
+            $headers[] = 'Reply-To: ' . $email;
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-Type: text/html; charset=UTF-8';
-            $headers[] = 'X-Mailer: PHP/' . phpversion();
 
-            if (mail($contactToEmail, $subjectLine, $body, implode("\r\n", $headers))) {
+            if (mail($to, $subjectLine, $body, implode("\r\n", $headers))) {
                 $contactStatus = 'success';
                 $contactMessage = 'Thank you! Your message has been sent successfully.';
             } else {
                 $contactStatus = 'error';
-                $contactMessage = 'Sorry, your message could not be sent right now. Please try again later or email bluedykebrass@gmail.com directly.';
+                $contactMessage = 'Sorry, your message could not be sent right now. Please try again later.';
             }
         }
     }
@@ -122,8 +68,8 @@
                     <img src="assets/images/logo.png" alt="Brass Band Logo">
                 </span>
                 <span>
-                    <strong>Blue Dyke Brassband</strong>
-                    <small>Eldoret · Making Moments Musical</small>
+                    <strong>Blue Dyke Brass Band</strong>
+                    <small>Eldoret · Kenya · Making Moments Musical</small>
                 </span>
             </a>
             <button class="hamburger" aria-label="Toggle navigation">
@@ -179,9 +125,14 @@
                     <!--LEFT COLUMN-->
                     <div class="hero-copy">
                         <p class="eyebrow">Blue Dyke Brassband · Eldoret</p>
-                        <h1>Making Moments Musical</h1>
-                        <p class="hero-text">Your gateway to brass brilliance, delivering uplifting performances for
-                            concerts, parades, church services, weddings and community celebrations.</p>
+                        <h1>Blue Dyke Brass Band</h1>
+                        <p class="hero-tagline">Making Moments Musical</p>
+                        <p class="hero-text"> Blue Dyke Brass Band is a brass band based in Eldoret, Kenya,
+                            delivering live music and uplifting
+                            performances for
+                            concerts, parades, church services, weddings and community celebrations.We are your gateway
+                            to
+                            brass brilliance,</p>
                         <div class="hero-actions">
                             <a href="#book" class="btn btn-primary">Book the Band</a>
                             <a href="#events" class="btn btn-secondary">View Upcoming Events</a>
@@ -220,14 +171,15 @@
                         <div class="photo-stack">
                             <!--Back photo-->
                             <div class="photo-card back-photo">
-                                <img src="assets/images/sample 1.jpeg" alt="Parade Performance">
+                                <img src="assets/images/sample 1.jpeg"
+                                    alt="Blue Dyke Brass Band performing during a parade in Kenya">
                                 <span class="photo-tag">
                                     <i class="fas fa-drum"></i> Events
                                 </span>
                             </div>
                             <!--Middle photo-->
                             <div class="photo-card middle-photo">
-                                <img src="assets/images/logo.png" alt="Church Service">
+                                <img src="assets/images/logo.png" alt="Blue Dyke Brass Band logo">
                                 <span class="photo-tag">
                                     <i class="fas fa-church"></i> Logo
                                 </span>
@@ -235,7 +187,7 @@
                             <!--Front photo-->
                             <div class="photo-card front-photo">
 
-                                <img src="assets/images/Gate.jpeg" alt="Blue Dyke Brass Band">
+                                <img src="assets/images/Gate.jpeg" alt="Blue Dyke Brass Band in Eldoret, Kenya">
 
                                 <div class="overlay"></div>
                                 <div class="hero-photo-info">
@@ -480,43 +432,64 @@
                 <div class="members-grid">
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Sila.jpeg"
-                                alt="BM Silah Kihusa"></div>
+                        <div class="member-avatar"></div>
                         <h3>BM Silah Kihusa</h3>
-                        <p class="member-aka">"Sila"</p>
+                        <p class="member-aka">AKA-Sila</p>
                         <p class="member-instrument">Solo Cornet</p>
                         <p class="member-about">Leads rehearsals and shapes the band’s musical direction
                             with passion
                             and discipline.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card euphonium-card"
                         style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/euphonium.jpeg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Alex.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Alex.jpg"
                                 alt="DBM Alex Mkoyani"></div>
 
                         <h3>DBM Alex Mkoyani</h3>
-                        <p class="member-aka">"Aleko"</p>
+                        <p class="member-aka">AKA-Aleko</p>
                         <p class="member-instrument">Euphoniumist</p>
                         <p class="member-about">Guides brass sections with focus, precision and artistry
                             during practice
                             and performance.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card tuba-card"
@@ -525,19 +498,30 @@
                                 alt="Fortune Henry"></div>
 
                         <h3>Fortune Henry</h3>
-                        <p class="member-aka">"Kabitoh"</p>
+                        <p class="member-aka">AKA-Kabitoh</p>
                         <p class="member-instrument">Tubist</p>
                         <p class="member-about">Adds expressive, lyrical tones that bring elegance to every
                             arrangement.
                         </p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card tuba-card"
@@ -545,39 +529,61 @@
                         <div class="member-avatar"><img src="assets/images/Member Images/Fabu.jpg"
                                 alt="Fabregas Mahiji"></div>
                         <h3>Fabregas Mahiji</h3>
-                        <p class="member-aka">"Fabu"</p>
+                        <p class="member-aka">AKA-Fabu</p>
                         <p class="member-instrument">Tubist</p>
                         <p class="member-about">Balances the ensemble with warm harmony and a steady,
                             musical presence.
                         </p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card tuba-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/tuba.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Charity.jpeg" alt="Charity"></div>
+                        <div class="member-avatar"></div>
 
                         <h3>Charity</h3>
-                        <p class="member-aka">"Charii"</p>
+                        <p class="member-aka">AKA-Charii</p>
                         <p class="member-instrument">Tubist</p>
                         <p class="member-about">Balances the ensemble with warm harmony and a steady,
                             musical presence.
                         </p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card euphonium-card"
@@ -586,84 +592,124 @@
                         </div>
 
                         <h3>Henry Semo</h3>
-                        <p class="member-aka">"Tileh"</p>
+                        <p class="member-aka">AKA-Tileh</p>
                         <p class="member-instrument">Solo Euphonium</p>
                         <p class="member-about">Supports expressive passages and keeps the ensemble sounding
                             polished
                             and balanced.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Bass\ trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Tata.jpeg" alt="Shadrack Tata">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Tata.jpg" alt="Shadrack Tata">
                         </div>
 
                         <h3>Shadrack Tata</h3>
-                        <p class="member-aka">"Tata"</p>
+                        <p class="member-aka">AKA Tata</p>
                         <p class="member-instrument">Bass Trombonist</p>
                         <p class="member-about">Provides grounding rhythm and a firm foundation that keeps
                             the band
                             grounded.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Bravo.jpeg"
-                                alt="Bravin Amalicha">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Bravin Amalicha</h3>
-                        <p class="member-aka">"Bravo"</p>
+                        <p class="member-aka">AKA-Bravo</p>
                         <p class="member-instrument">1st Trombone</p>
                         <p class="member-about">Brings energy, precision and timing that drive the music
                             forward with
                             impact.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Carson.jpeg"
-                                alt="Carson Ogamba">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Carson Ogamba</h3>
-                        <p class="member-aka">"Carson"</p>
+                        <p class="member-aka">AKA-Carson</p>
                         <p class="member-instrument">1st Trombone</p>
                         <p class="member-about">Contributes rich tone and dependable support to the full
                             brass sound.
                         </p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card trombone-card"
@@ -672,40 +718,61 @@
                                 alt="Bravin Amalicha"></div>
 
                         <h3>Benjamin Sigira</h3>
-                        <p class="member-aka">"Benja"</p>
+                        <p class="member-aka">AKA-Benja</p>
                         <p class="member-instrument">2nd Trombone</p>
                         <p class="member-about">Brings bright melodies and an upbeat presence to every
                             performance and
                             rehearsal.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/phillip.jpg" alt="Ian Phillip">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Ian Phillip</h3>
-                        <p class="member-aka">"Phyllo"</p>
+                        <p class="member-aka">AKA-Phyllo</p>
                         <p class="member-instrument">2nd Trombone</p>
                         <p class="member-about">Brings bright melodies and an upbeat presence to every
                             performance and
                             rehearsal.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -716,190 +783,246 @@
                                 alt="BM Silah Kihusa"></div>
 
                         <h3>Alvin Mokiro</h3>
-                        <p class="member-aka">"Alvo"</p>
+                        <p class="member-aka">AKA-Alvo</p>
                         <p class="member-instrument">Solo Cornet</p>
                         <p class="member-about">Adds warmth and blend to the band’s harmonies with elegance
                             and
                             confidence.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Ibrah Muna.jpeg"
-                                alt="Ibrahim Muna">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Ibrahim Muna</h3>
-                        <p class="member-aka">"Ibrah"</p>
+                        <p class="member-aka">AKA-Ibrah</p>
                         <p class="member-instrument">Solo Cornet</p>
                         <p class="member-about">Helps hold the structure of each piece with steady rhythm
                             and control.
                         </p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Tony.jpeg" alt="Tony Luloka">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Tony Luloka</h3>
-                        <p class="member-aka">"Tonyjaa"</p>
+                        <p class="member-aka">Tonyjaa</p>
                         <p class="member-instrument">Soprano Cornet</p>
                         <p class="member-about">Adds vivid dynamics and strong beats that energize every
                             performance.
                         </p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Granton.jpeg"
-                                alt="Granton Muchesia">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Granton Muchesia</h3>
-                        <p class="member-aka">"Generali"</p>
+                        <p class="member-aka">AKA-Generali </p>
                         <p class="member-instrument">1st Cornet</p>
                         <p class="member-about">Brings clarity and confidence to the melody line in every
                             public
                             appearance.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                    <div class="card member-card cornet-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Stano.jpeg"
-                                alt="Stanislaus Khaemba">
-                        </div>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
 
-                        <h3>Stanislaus Khaemba</h3>
-                        <p class="member-aka">"Stano" </p>
-                        <p class="member-instrument">1st Cornet</p>
-                        <p class="member-about">Brings clarity and confidence to the melody line in every
-                            public
-                            appearance.</p>
-                        <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Trumpet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Obed.jpeg" alt="Obed Ndalu">
+                        <div class="member-avatar"><img src="assets/images/Member Images/obed.jpg" alt="Obed Ndalu">
                         </div>
 
                         <h3>Obed Ndalu</h3>
-                        <p class="member-aka">"Obed"</p>
+                        <p class="member-aka">AKA-Obed</p>
                         <p class="member-instrument">2nd Cornet</p>
                         <p class="member-about">Adds depth and character to the band’s musical storytelling
                             and sound.
                         </p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trumpet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Yvette.jpeg" alt="Yvette">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Yvette Mahiji</h3>
-                        <p class="member-aka">"Yvette"</p>
+                        <p class="member-aka">AKA-Yvette</p>
                         <p class="member-instrument">2nd Cornet</p>
                         <p class="member-about">Contributes graceful tone and excellent ensemble awareness
                             on stage.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card horn-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Flugelhorn.webp'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Kadenge.jpeg"
-                                alt="John Bright Kadenge">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>John Bright Kadenge</h3>
-                        <p class="member-aka">"Kadenge"</p>
+                        <p class="member-aka">AKA-Kadenge</p>
                         <p class="member-instrument">Flugel Horn</p>
                         <p class="member-about">Contributes graceful tone and excellent ensemble awareness
                             on stage.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card horn-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/baritone.webp'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Wafula.jpg"
-                                alt="Lawrence Wafula">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Lawrence Wafula</h3>
-                        <p class="member-aka">"Lau"</p>
+                        <p class="member-aka">AKA Lau</p>
                         <p class="member-instrument">Hornist</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
                             style.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card baritone-card"
@@ -907,19 +1030,30 @@
                         <div class="member-avatar"></div>
 
                         <h3>Ibrahim Ali</h3>
-                        <p class="member-aka">"Ibrah"</p>
+                        <p class="member-aka">AKA Ibrah</p>
                         <p class="member-instrument">Baritone</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
                             style.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card percussion-card"
@@ -927,104 +1061,153 @@
                         <div class="member-avatar"></div>
 
                         <h3>Sam Munala</h3>
-                        <p class="member-aka">"Sam"</p>
+                        <p class="member-aka">AKA Sam</p>
                         <p class="member-instrument">Snare drum</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
                             style.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/drums.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Bradley.png"
-                                alt="Bradley Muhambe">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Bradley Muhambe</h3>
-                        <p class="member-aka">"Brad"</p>
+                        <p class="member-aka">AKA Brad</p>
                         <p class="member-instrument">Drummer</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
                             style.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Bass\ trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/collo.jpg"
-                                alt="Collins Kipkoech">
+                        <div class="member-avatar"><img src="assets/images/Member Images/collo.jpg" alt="Fortune Henry">
                         </div>
 
                         <h3>Collins Kipkoech</h3>
-                        <p class="member-aka">"Mfalme"</p>
+                        <p class="member-aka">AKA Mfalme</p>
                         <p class="member-instrument">Trombonist/Drummer</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
                             style.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards\ 2.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Ian.jpeg" alt="Ian Senerwa">
-                        </div>
+                        <div class="member-avatar"></div>
 
                         <h3>Ian Senerwa</h3>
-                        <p class="member-aka">"Ian"</p>
+                        <p class="member-aka">AKA Ian</p>
                         <p class="member-instrument">Principal Conductor/Drummer</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
                             style.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="card member-card percussion-card">
                         <div class="member-avatar"></div>
 
                         <h3>NEW MEMBER</h3>
-                        <p class="member-aka">COULD BE YOU! Join Us Today!</p>
+                        <p class="member-aka">COULD BE YOU!</p>
                         <p class="member-instrument">New member Profile</p>
                         <p class="member-about">
-                            We are always looking for talented musicians to join our band. If you are interested in
-                            becoming a member, please contact us for more information.
                         </p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1045,8 +1228,7 @@
 
                     <!-- Event 1 -->
 
-                    <article class="event-card featured"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.72), rgba(2, 2, 2, 0.7)), url('assets/images/Cards 2.jpg'); background-size: cover; background-position: center;">
+                    <article class="event-card featured">
 
                         <div class="event-date">
                             <span class="day">23</span>
@@ -1082,8 +1264,7 @@
 
                     <!-- Event 2 -->
 
-                    <article class="event-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.72), rgba(2, 2, 2, 0.7)), url('assets/images/Cards.jpg'); background-size: cover; background-position: center;">
+                    <article class="event-card">
 
                         <div class="event-date">
                             <span class="day">01</span>
@@ -1119,8 +1300,7 @@
 
                     <!-- Event 3 -->
 
-                    <article class="event-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.72), rgba(2, 2, 2, 0.7)), url('assets/images/Gate.jpeg'); background-size: cover; background-position: center;">
+                    <article class="event-card">
 
                         <div class="event-date">
                             <span class="day">02</span>
@@ -1213,30 +1393,27 @@
                     every performance is a memory worth celebrating.
                 </p>
 
-                <div class="gallery-carousel">
-                    <div class="gallery-grid" id="gallery-grid">
-                        <?php if (!empty($galleryImages)): ?>
-                            <?php foreach ($galleryImages as $index => $imagePath): ?>
-                                <?php
-                                $folderName = basename(dirname($imagePath));
-                                $categoryLabel = ucwords(str_replace(['-', '_'], ' ', $folderName));
-                                $spanClass = $index === 0 ? 'wide' : ($index === 2 ? 'tall' : '');
-                                ?>
-                                <div class="gallery-item <?= $spanClass ?>" data-category="<?= strtolower($folderName) ?>">
-                                    <img src="<?= $imagePath ?>"
-                                        alt="<?= htmlspecialchars($categoryLabel, ENT_QUOTES, 'UTF-8') ?>">
-                                    <div class="gallery-overlay">
-                                        <span
-                                            class="gallery-badge"><?= htmlspecialchars($categoryLabel, ENT_QUOTES, 'UTF-8') ?></span>
-                                        <h3><?= htmlspecialchars($categoryLabel, ENT_QUOTES, 'UTF-8') ?></h3>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <p class="section-subtitle">No gallery images found yet. Add images to the gallery folders to
-                                display them here.</p>
-                        <?php endif; ?>
+                <div class="gallery-grid" id="gallery-grid">
+                    <?php if (!empty($galleryImages)): ?>
+                    <?php foreach ($galleryImages as $index => $imagePath): ?>
+                    <?php
+                            $folderName = basename(dirname($imagePath));
+                            $categoryLabel = ucwords(str_replace(['-', '_'], ' ', $folderName));
+                            $spanClass = $index === 0 ? 'wide' : ($index === 2 ? 'tall' : '');
+                            ?>
+                    <div class="gallery-item <?= $spanClass ?>" data-category="<?= strtolower($folderName) ?>">
+                        <img src="<?= $imagePath ?>" alt="<?= htmlspecialchars($categoryLabel, ENT_QUOTES, 'UTF-8') ?>">
+                        <div class="gallery-overlay">
+                            <span
+                                class="gallery-badge"><?= htmlspecialchars($categoryLabel, ENT_QUOTES, 'UTF-8') ?></span>
+                            <h3><?= htmlspecialchars($categoryLabel, ENT_QUOTES, 'UTF-8') ?></h3>
+                        </div>
                     </div>
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                    <p class="section-subtitle">No gallery images found yet. Add images to the gallery folders to
+                        display them here.</p>
+                    <?php endif; ?>
                 </div>
                 <div class="gallery-action">
                     <a href="#contact" class="btn btn-primary">
@@ -1253,8 +1430,7 @@
                     <h2>Bring your talent and be part of the sound</h2>
                 </div>
                 <div class="join-grid">
-                    <div class="card join-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.8), rgba(2, 2, 2, 0.7)), url('assets/images/Cards 3.avif'); background-size: cover; background-position: center;">
+                    <div class="card join-card">
                         <h3>Instruments Needed</h3>
                         <ul class="check-list">
                             <li>Solo Horn</li>
@@ -1263,21 +1439,18 @@
                             <li>Percussion</li>
                         </ul>
                     </div>
-                    <div class="card join-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.8), rgba(2, 2, 2, 0.7)), url('assets/images/trumpet.jpg'); background-size: cover; background-position: center;">
+                    <div class="card join-card">
                         <h3>Audition & Practice</h3>
                         <p>New members are welcome. Auditions are simple and friendly, with rehearsal
                             sessions held
                             regularly for skill development and teamwork.</p>
                     </div>
-                    <div class="card join-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.8), rgba(2, 2, 2, 0.7)), url('assets/images/Cards.jpg'); background-size: cover; background-position: center;">
+                    <div class="card join-card">
                         <h3>Requirements</h3>
                         <p>Passion for music, commitment to practice, and a willingness to grow with the
                             group.</p>
                     </div>
-                    <div class="card join-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.8), rgba(2, 2, 2, 0.7)), url('assets/images/Gate.jpeg'); background-size: cover; background-position: center;">
+                    <div class="card join-card">
                         <h3>Why Join Us</h3>
                         <p>Grow your confidence, sharpen your discipline and perform with a team that values
                             excellence and community.</p>
@@ -1295,8 +1468,7 @@
                         delivered with heart, precision and passion.</p>
                 </div>
                 <div class="testimonial-grid">
-                    <article class="card testimonial-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.78), rgba(2, 2, 2, 0.7)), url('assets/images/Cards 2.jpg'); background-size: cover; background-position: center;">
+                    <article class="card testimonial-card">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“The band brought a powerful, uplifting energy to our church event. Every piece felt polished
                             and memorable.”</p>
@@ -1305,8 +1477,7 @@
                             <span>Church Service Host</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.78), rgba(2, 2, 2, 0.7)), url('assets/images/Gate.jpeg'); background-size: cover; background-position: center;">
+                    <article class="card testimonial-card">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“Their sound was bold, rich and perfectly timed. They turned our celebration into something
                             truly special.”</p>
@@ -1315,8 +1486,7 @@
                             <span>Wedding Planner</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.78), rgba(2, 2, 2, 0.7)), url('assets/images/Cards.jpg'); background-size: cover; background-position: center;">
+                    <article class="card testimonial-card">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“Professional, disciplined and exciting. Blue Dyke made our parade feel larger than life.”
                         </p>
@@ -1325,8 +1495,7 @@
                             <span>Community Event Organizer</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.78), rgba(2, 2, 2, 0.7)), url('assets/images/Cards 3.avif'); background-size: cover; background-position: center;">
+                    <article class="card testimonial-card">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“They were punctual, warm and incredibly organized. Our guests kept talking about the music
                             long after the event ended.”</p>
@@ -1364,8 +1533,17 @@
 
                             <div>
                                 <h3>Call Us</h3>
-                                <p>+254718877448/+254717827959</p>
-                                <p>+254791249805</p>
+                                <p>
+                                    <a href="tel:+254718877448">+254 718 877 448</a>
+                                </p>
+
+                                <p>
+                                    <a href="tel:+254717827959">+254 717 827 959</a>
+                                </p>
+
+                                <p>
+                                    <a href="tel:+254791249805">+254 791 249 805</a>
+                                </p>
                             </div>
 
                         </div>
@@ -1378,7 +1556,11 @@
 
                             <div>
                                 <h3>Email</h3>
-                                <p>bluedykebrass@gmail.com</p>
+                                <p>
+                                    <a href="mailto:bluedykebrass@gmail.com">
+                                        bluedykebrass@gmail.com
+                                    </a>
+                                </p>
                             </div>
 
                         </div>
@@ -1397,13 +1579,22 @@
                         </div>
 
                         <div class="social-links">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
+                                aria-label="Blue Dyke Brass Band on YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
+                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
 
 
@@ -1411,28 +1602,30 @@
 
                     <!-- Contact Form -->
 
-                    <form class="contact-form" method="POST"
-                        action="<?= htmlspecialchars($_SERVER['PHP_SELF'] . '#contact', ENT_QUOTES, 'UTF-8') ?>">
+                    <form class="contact-form" method="POST" action="#contact">
                         <?php if ($contactStatus !== ''): ?>
-                            <div class="contact-status <?= htmlspecialchars($contactStatus, ENT_QUOTES, 'UTF-8') ?>"
-                                role="alert">
-                                <?= htmlspecialchars($contactMessage, ENT_QUOTES, 'UTF-8') ?>
-                            </div>
+                        <div class="contact-status <?= htmlspecialchars($contactStatus, ENT_QUOTES, 'UTF-8') ?>"
+                            role="alert">
+                            <?= htmlspecialchars($contactMessage, ENT_QUOTES, 'UTF-8') ?>
+                        </div>
                         <?php endif; ?>
 
                         <div class="input-group">
 
-                            <input type="text" name="contact_name" placeholder="Your Name" required>
+                            <input type="text" name="contact_name" placeholder="Your Name" aria-label="Your Name"
+                                required>
 
-                            <input type="email" name="contact_email" placeholder="Email Address" required>
+                            <input type="email" name="contact_email" placeholder="Email Address"
+                                aria-label="Email Address" required>
 
                         </div>
 
-                        <input type="text" name="contact_subject" placeholder="Subject">
+                        <input type="text" name="contact_subject" placeholder="Subject" aria-label="Subject">
 
-                        <textarea name="contact_message" rows="6" placeholder="Your Message" required></textarea>
+                        <textarea name="contact_message" rows="6" placeholder="Your Message" aria-label="Your Message"
+                            required></textarea>
 
-                        <button type="submit" name="contact_submit" value="1" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary">
 
                             Send Message
 
@@ -1488,12 +1681,24 @@
 
                         <span>
                             <i class="fas fa-phone"></i>
-                            +254 718877448/+254717827959/+254791249805
+                            <p>
+                                <a href="tel:+254718877448">+254 718 877 448</a>
+                            </p>
+
+                            <p>
+                                <a href="tel:+254717827959">+254 717 827 959</a>
+                            </p>
+
+                            <p>
+                                <a href="tel:+254791249805">+254 791 249 805</a>
+                            </p>
                         </span>
 
                         <span>
                             <i class="fas fa-envelope"></i>
-                            bluedykebrass@gmail.com
+                            <p>
+                                <a href="mailto:bluedykebrass@gmail.com">bluedykebrass@gmail.com</a>
+                            </p>
                         </span>
 
                     </div>
@@ -1511,14 +1716,12 @@
 
             <div>
 
-                <img src="assets/images/logo.png" class="footer-logo">
+                <img src="assets/images/logo.png" class="footer-logo" alt="Blue Dyke Brass Band logo">
 
                 <p class="footer-text">
-
-                    Making Moments Musical.
-
-                    Bringing communities together through inspiring brass performances.
-
+                    Blue Dyke Brass Band – Making Moments Musical.
+                    Bringing communities together through inspiring live brass performances
+                    in Eldoret and across Kenya.
                 </p>
 
             </div>
@@ -1547,20 +1750,14 @@
 
             <div>
 
-                <h3>Services</h3>
+                <h3>Brass Band Services</h3>
 
                 <ul>
-
-                    <li>Wedding Ceremonies</li>
-
-                    <li>Church Services</li>
-
-                    <li>Concerts</li>
-
-                    <li>Parades</li>
-
-                    <li>Graduations</li>
-
+                    <li>Wedding Brass Band Services</li>
+                    <li>Church Brass Band Services</li>
+                    <li>Live Concert Performances</li>
+                    <li>Parades and Processions</li>
+                    <li>Graduation Ceremonies</li>
                 </ul>
 
             </div>
@@ -1569,7 +1766,17 @@
 
                 <h3>Contact</h3>
 
-                <p>📞 +254 718 877 448/+254 717 827 959/+254 791 249 805</p>
+                <p>
+                    <a href="tel:+254718877448">+254 718 877 448</a>
+                </p>
+
+                <p>
+                    <a href="tel:+254717827959">+254 717 827 959</a>
+                </p>
+
+                <p>
+                    <a href="tel:+254791249805">+254 791 249 805</a>
+                </p>
 
                 <p>✉ bluedykebrass@gmail.com</p>
 
@@ -1587,7 +1794,7 @@
 
             <p class="developer-credit">
                 Designed with ❤️ for Blue Dyke Brass Band by:
-                <a href="https://henry-portfolio-fawn.vercel.app" target="_blank">
+                <a href="https://henry-portfolio-fawn.vercel.app" target="_blank" rel="noopener noreferrer">
 
                     Henry Semo
                 </a>
@@ -1605,9 +1812,12 @@
 
         <!-- WhatsApp -->
 
-        <a href="https://wa.me/254718877448" target="_blank" class="floating-btn whatsapp">
-
+        <a href="https://wa.me/254718877448" target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp"
+            aria-label="Contact Blue Dyke Brass Band on WhatsApp">
             <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <i class="fab fa-whatsapp"></i>
 
         </a>
 

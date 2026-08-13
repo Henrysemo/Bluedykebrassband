@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Dyke Brass Band |Brass Band in Eldoret,Kenya</title>
+    <link rel="icon" type="image/ico" href="assets/favicon/favicon.ico">
+    
     <meta name="description"
         content="Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.">
     <meta name="author" content="Blue Dyke Brass Band">

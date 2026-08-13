@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Dyke Brassband | Eldoret | Making Moments Musical</title>
+    <title>Blue Dyke Brass Band |Brass Band in Eldoret,Kenya</title>
     <meta name="description"
-        content="Blue Dyke Brassband Eldoret brings passionate brass performances for concerts, church events, parades, weddings and community celebrations.">
+        content="Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.">
+    <meta name="author" content="Blue Dyke Brass Band">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
     <meta name="keywords"
         content="Blue Dyke Brassband, brass band Eldoret, brass performance Kenya, wedding band Eldoret, church brass band">
     <meta name="author" content="Blue Dyke Brassband">
@@ -17,6 +20,53 @@
     <link href="https://fonts.cdnfonts.com/css/futura-bk" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="canonical" href="https://bluedykebrassband.onrender.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Blue Dyke Brass Band">
+    <meta property="og:title" content="Blue Dyke Brass Band | Brass Band in Eldoret, Kenya">
+    <meta property="og:description"
+        content="Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.">
+    <meta property="og:url" content="https://bluedykebrassband.onrender.com/">
+    <meta property="og:image" content="https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg">
+    <meta property="og:image:alt" content="Blue Dyke Brass Band in Eldoret, Kenya">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blue Dyke Brass Band | Brass Band in Eldoret, Kenya">
+    <meta name="twitter:description"
+        content="Blue Dyke Brass Band provides live brass music for weddings, church services, concerts, parades, graduations and community events in Eldoret and across Kenya.">
+    <meta name="twitter:image" content="https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Blue Dyke Brass Band",
+        "alternateName": "Blue Dyke Brassband",
+        "url": "https://bluedykebrassband.onrender.com/",
+        "logo": "https://bluedykebrassband.onrender.com/assets/images/logo.png",
+        "image": "https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg",
+        "description": "Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.",
+        "genre": [
+            "Brass Band",
+            "Brass Music",
+            "Live Music"
+        ],
+        "location": {
+            "@type": "Place",
+            "name": "Eldoret, Kenya",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Eldoret",
+                "addressCountry": "KE"
+            }
+        },
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61593338960381",
+            "https://www.instagram.com/bluedykebrassband",
+            "https://youtube.com/@bluedykebrassband",
+            "https://www.tiktok.com/@bluedykebrassband"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -432,7 +482,8 @@
                 <div class="members-grid">
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Sila.jpeg"
+                                alt="BM Silah Kihusa"></div>
                         <h3>BM Silah Kihusa</h3>
                         <p class="member-aka">AKA-Sila</p>
                         <p class="member-instrument">Solo Cornet</p>
@@ -462,7 +513,7 @@
                     </div>
                     <div class="card member-card euphonium-card"
                         style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/euphonium.jpeg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Alex.jpg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Alex.jpeg"
                                 alt="DBM Alex Mkoyani"></div>
 
                         <h3>DBM Alex Mkoyani</h3>
@@ -557,7 +608,8 @@
                     </div>
                     <div class="card member-card tuba-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/tuba.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Charity.jpeg" alt="Charity">
+                        </div>
 
                         <h3>Charity</h3>
                         <p class="member-aka">AKA-Charii</p>
@@ -620,7 +672,7 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Bass\ trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Tata.jpg" alt="Shadrack Tata">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Tata.jpeg" alt="Shadrack Tata">
                         </div>
 
                         <h3>Shadrack Tata</h3>
@@ -652,7 +704,8 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Bravo.jpeg"
+                                alt="Bravin Amalicha"></div>
 
                         <h3>Bravin Amalicha</h3>
                         <p class="member-aka">AKA-Bravo</p>
@@ -683,7 +736,8 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Carson.jpeg"
+                                alt="Carson Ogamba"></div>
 
                         <h3>Carson Ogamba</h3>
                         <p class="member-aka">AKA-Carson</p>
@@ -715,7 +769,7 @@
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
                         <div class="member-avatar"><img src="assets/images/Member Images/benja.jpg"
-                                alt="Bravin Amalicha"></div>
+                                alt="Benjamin Sigira"></div>
 
                         <h3>Benjamin Sigira</h3>
                         <p class="member-aka">AKA-Benja</p>
@@ -746,7 +800,8 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/phillip.jpg" alt="Ian Phillip">
+                        </div>
 
                         <h3>Ian Phillip</h3>
                         <p class="member-aka">AKA-Phyllo</p>
@@ -779,8 +834,7 @@
 
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Alvo.jpg"
-                                alt="BM Silah Kihusa"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Alvo.jpg" alt="Alvo"></div>
 
                         <h3>Alvin Mokiro</h3>
                         <p class="member-aka">AKA-Alvo</p>
@@ -811,7 +865,8 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Ibrah Muna.jpeg"
+                                alt="Ibrahim Muna"></div>
 
                         <h3>Ibrahim Muna</h3>
                         <p class="member-aka">AKA-Ibrah</p>
@@ -842,7 +897,8 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Tony.jpeg" alt="Tony Luloka">
+                        </div>
 
                         <h3>Tony Luloka</h3>
                         <p class="member-aka">Tonyjaa</p>
@@ -873,7 +929,8 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Granton.jpeg"
+                                alt="Granton Muchesia"></div>
 
                         <h3>Granton Muchesia</h3>
                         <p class="member-aka">AKA-Generali </p>
@@ -903,8 +960,30 @@
                         </div>
                     </div>
                     <div class="card member-card cornet-card"
+                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Stano.jpeg"
+                                alt="Stanislaus Khaemba">
+                        </div>
+
+                        <h3>Stanislaus Khaemba</h3>
+                        <p class="member-aka">"Stano" </p>
+                        <p class="member-instrument">1st Cornet</p>
+                        <p class="member-about">Brings clarity and confidence to the melody line in every
+                            public
+                            appearance.</p>
+                        <div class="member-social">
+                            <a href="https://www.facebook.com/profile.php?id=61593338960381"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/bluedykebrassband?igsh=aDB6YTBlZmJ1cmVl"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com/@bluedykebrassband?si=bA5_GtZTSyIb5kCM"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="https://www.tiktok.com/@bluedykebrassband"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Trumpet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/obed.jpg" alt="Obed Ndalu">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Obed.jpeg" alt="Obed Ndalu">
                         </div>
 
                         <h3>Obed Ndalu</h3>
@@ -936,7 +1015,8 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trumpet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Yvette.jpeg" alt="Yvette">
+                        </div>
 
                         <h3>Yvette Mahiji</h3>
                         <p class="member-aka">AKA-Yvette</p>
@@ -966,9 +1046,10 @@
                     </div>
                     <div class="card member-card horn-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Flugelhorn.webp'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Kadenge.jpeg"
+                                alt="John Bright Kadenge"></div>
 
-                        <h3>John Bright Kadenge</h3>
+                        <h3>John Bright</h3>
                         <p class="member-aka">AKA-Kadenge</p>
                         <p class="member-instrument">Flugel Horn</p>
                         <p class="member-about">Contributes graceful tone and excellent ensemble awareness
@@ -996,7 +1077,8 @@
                     </div>
                     <div class="card member-card horn-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/baritone.webp'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Wafula.jpg"
+                                alt="Lawrence Wafula"></div>
 
                         <h3>Lawrence Wafula</h3>
                         <p class="member-aka">AKA Lau</p>
@@ -1089,7 +1171,8 @@
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/drums.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Bradley.png"
+                                alt="Bradley Muhambe"></div>
 
                         <h3>Bradley Muhambe</h3>
                         <p class="member-aka">AKA Brad</p>
@@ -1120,7 +1203,8 @@
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Bass\ trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/collo.jpg" alt="Fortune Henry">
+                        <div class="member-avatar"><img src="assets/images/Member Images/collo.jpg"
+                                alt="Collins Kipkoech">
                         </div>
 
                         <h3>Collins Kipkoech</h3>
@@ -1152,7 +1236,8 @@
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards\ 2.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Ian.jpeg" alt="Ian Senerwa">
+                        </div>
 
                         <h3>Ian Senerwa</h3>
                         <p class="member-aka">AKA Ian</p>
@@ -1185,9 +1270,11 @@
                         <div class="member-avatar"></div>
 
                         <h3>NEW MEMBER</h3>
-                        <p class="member-aka">COULD BE YOU!</p>
+                        <p class="member-aka">COULD BE YOU! Join Us Today!</p>
                         <p class="member-instrument">New member Profile</p>
                         <p class="member-about">
+                            We are always looking for talented musicians to join our band. If you are interested in
+                            becoming a member, please contact us for more information.
                         </p>
                         <div class="member-social">
                             <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"

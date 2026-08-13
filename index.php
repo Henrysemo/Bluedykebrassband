@@ -1917,8 +1917,6 @@
             <i class="fab fa-whatsapp"></i>
         </a>
 
-        <i class="fab fa-whatsapp"></i>
-
         </a>
 
         <!-- Back To Top -->

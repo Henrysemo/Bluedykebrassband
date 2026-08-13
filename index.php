@@ -348,9 +348,10 @@
                     </h2>
 
                     <p class="section-subtitle">
-                        Bringing communities together through inspiring brass music, memorable performances and a
-                        passion
-                        for excellence.
+                           <strong>Blue Dyke Brass Band</strong> is a brass band based in
+    <strong>Eldoret, Kenya</strong>, bringing powerful live brass music
+    to weddings, church services, concerts, parades, graduations,
+    community celebrations and other special events.
                     </p>
                 </div>
                 <div class="about-grid">
@@ -380,6 +381,12 @@
                             and celebrate the power of music.
 
                         </p>
+                        <p>
+    Our goal is to make every occasion memorable through energetic,
+    uplifting and professional brass performances. From community
+    celebrations and church services to major concerts and public
+    events, Blue Dyke Brass Band brings people together through music.
+</p>
 
 
                         <div class="about-stats">
@@ -424,7 +431,7 @@
                                     <i class="fas fa-bullseye"></i>
                                 </div>
 
-                                <h3>Mission</h3>
+                                <h3>Our Mission</h3>
 
                                 <p>
                                     To inspire and unite communities through uplifting brass music and exceptional
@@ -439,7 +446,7 @@
                                     <i class="fas fa-eye"></i>
                                 </div>
 
-                                <h3>Vision</h3>
+                                <h3>Our Vision</h3>
 
                                 <p>
                                     To become one of Kenya's leading brass bands recognized for excellence and

@@ -1737,22 +1737,7 @@
             </div>
 
         </section>
-        <section class="section" id="location">
-    <div class="section-inner">
-        <div class="section-heading">
-            <span class="eyebrow">Our Location</span>
-            <h2>Brass Band in Eldoret, Kenya</h2>
-        </div>
 
-        <p>
-            Blue Dyke Brass Band is based in Eldoret, Kenya, and
-            performs at weddings, church services, concerts, parades,
-            graduations, community celebrations and other special
-            events. We are available for performances in Eldoret,
-            Nakuru and other locations across Kenya.
-        </p>
-    </div>
-</section>
         <section class="cta section" id="book">
 
             <div class="container">

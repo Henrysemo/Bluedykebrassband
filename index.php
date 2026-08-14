@@ -1705,7 +1705,7 @@
 
                     <!-- Contact Form -->
 
-                    <form class="contact-form" method="POST" action="#contact"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/sample 1.jpeg'); background-size: cover; background-position: center;">
+                    <form class="contact-form" method="POST" action="#contact"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards.jpeg'); background-size: cover; background-position: center;">
                         <?php if ($contactStatus !== ''): ?>
                         <div class="contact-status <?= htmlspecialchars($contactStatus, ENT_QUOTES, 'UTF-8') ?>"
                             role="alert">

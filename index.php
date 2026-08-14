@@ -494,7 +494,7 @@
                         <div class="member-avatar"><img src="assets/images/Member Images/Sila.jpeg"
                                 alt="BM Silah Kihusa"></div>
                         <h3>BM Silah Kihusa</h3>
-                        <p class="member-aka">AKA-Sila</p>
+                        <p class="member-aka">"Sila"</p>
                         <p class="member-instrument">Solo Cornet</p>
                         <p class="member-about">Leads rehearsals and shapes the band’s musical direction
                             with passion
@@ -526,7 +526,7 @@
                                 alt="DBM Alex Mkoyani"></div>
 
                         <h3>DBM Alex Mkoyani</h3>
-                        <p class="member-aka">AKA-Aleko</p>
+                        <p class="member-aka">"Aleko"</p>
                         <p class="member-instrument">Euphoniumist</p>
                         <p class="member-about">Guides brass sections with focus, precision and artistry
                             during practice
@@ -558,7 +558,7 @@
                                 alt="Fortune Henry"></div>
 
                         <h3>Fortune Henry</h3>
-                        <p class="member-aka">AKA-Kabitoh</p>
+                        <p class="member-aka">"Kabitoh"</p>
                         <p class="member-instrument">Tubist</p>
                         <p class="member-about">Adds expressive, lyrical tones that bring elegance to every
                             arrangement.
@@ -589,7 +589,7 @@
                         <div class="member-avatar"><img src="assets/images/Member Images/Fabu.jpg"
                                 alt="Fabregas Mahiji"></div>
                         <h3>Fabregas Mahiji</h3>
-                        <p class="member-aka">AKA-Fabu</p>
+                        <p class="member-aka">"Fabu"</p>
                         <p class="member-instrument">Tubist</p>
                         <p class="member-about">Balances the ensemble with warm harmony and a steady,
                             musical presence.
@@ -621,7 +621,7 @@
                         </div>
 
                         <h3>Charity</h3>
-                        <p class="member-aka">AKA-Charii</p>
+                        <p class="member-aka">"Charii"</p>
                         <p class="member-instrument">Tubist</p>
                         <p class="member-about">Balances the ensemble with warm harmony and a steady,
                             musical presence.
@@ -653,7 +653,7 @@
                         </div>
 
                         <h3>Henry Semo</h3>
-                        <p class="member-aka">AKA-Tileh</p>
+                        <p class="member-aka">"Tileh"</p>
                         <p class="member-instrument">Solo Euphonium</p>
                         <p class="member-about">Supports expressive passages and keeps the ensemble sounding
                             polished
@@ -685,7 +685,7 @@
                         </div>
 
                         <h3>Shadrack Tata</h3>
-                        <p class="member-aka">AKA Tata</p>
+                        <p class="member-aka">"Tata"</p>
                         <p class="member-instrument">Bass Trombonist</p>
                         <p class="member-about">Provides grounding rhythm and a firm foundation that keeps
                             the band
@@ -717,7 +717,7 @@
                                 alt="Bravin Amalicha"></div>
 
                         <h3>Bravin Amalicha</h3>
-                        <p class="member-aka">AKA-Bravo</p>
+                        <p class="member-aka">"Bravo"</p>
                         <p class="member-instrument">1st Trombone</p>
                         <p class="member-about">Brings energy, precision and timing that drive the music
                             forward with
@@ -749,7 +749,7 @@
                                 alt="Carson Ogamba"></div>
 
                         <h3>Carson Ogamba</h3>
-                        <p class="member-aka">AKA-Carson</p>
+                        <p class="member-aka">"Carson"</p>
                         <p class="member-instrument">1st Trombone</p>
                         <p class="member-about">Contributes rich tone and dependable support to the full
                             brass sound.
@@ -781,7 +781,7 @@
                                 alt="Benjamin Sigira"></div>
 
                         <h3>Benjamin Sigira</h3>
-                        <p class="member-aka">AKA-Benja</p>
+                        <p class="member-aka">"Benja"</p>
                         <p class="member-instrument">2nd Trombone</p>
                         <p class="member-about">Brings bright melodies and an upbeat presence to every
                             performance and
@@ -813,7 +813,7 @@
                         </div>
 
                         <h3>Ian Phillip</h3>
-                        <p class="member-aka">AKA-Phyllo</p>
+                        <p class="member-aka">"Phyllo"</p>
                         <p class="member-instrument">2nd Trombone</p>
                         <p class="member-about">Brings bright melodies and an upbeat presence to every
                             performance and
@@ -846,7 +846,7 @@
                         <div class="member-avatar"><img src="assets/images/Member Images/Alvin.jpeg" alt="Alvo"></div>
 
                         <h3>Alvin Mokiro</h3>
-                        <p class="member-aka">AKA-Alvo</p>
+                        <p class="member-aka">"Alvo"</p>
                         <p class="member-instrument">Solo Cornet</p>
                         <p class="member-about">Adds warmth and blend to the band’s harmonies with elegance
                             and
@@ -878,7 +878,7 @@
                                 alt="Ibrahim Muna"></div>
 
                         <h3>Ibrahim Muna</h3>
-                        <p class="member-aka">AKA-Ibrah</p>
+                        <p class="member-aka">"Ibrah"</p>
                         <p class="member-instrument">Solo Cornet</p>
                         <p class="member-about">Helps hold the structure of each piece with steady rhythm
                             and control.
@@ -910,7 +910,7 @@
                         </div>
 
                         <h3>Tony Luloka</h3>
-                        <p class="member-aka">Tonyjaa</p>
+                        <p class="member-aka">"Tonyjaa"</p>
                         <p class="member-instrument">Soprano Cornet</p>
                         <p class="member-about">Adds vivid dynamics and strong beats that energize every
                             performance.
@@ -942,7 +942,7 @@
                                 alt="Granton Muchesia"></div>
 
                         <h3>Granton Muchesia</h3>
-                        <p class="member-aka">AKA-Generali </p>
+                        <p class="member-aka">"Generali"</p>
                         <p class="member-instrument">1st Cornet</p>
                         <p class="member-about">Brings clarity and confidence to the melody line in every
                             public
@@ -996,7 +996,7 @@
                         </div>
 
                         <h3>Obed Ndalu</h3>
-                        <p class="member-aka">AKA-Obed</p>
+                        <p class="member-aka">"Obed"</p>
                         <p class="member-instrument">2nd Cornet</p>
                         <p class="member-about">Adds depth and character to the band’s musical storytelling
                             and sound.
@@ -1028,7 +1028,7 @@
                         </div>
 
                         <h3>Yvette Mahiji</h3>
-                        <p class="member-aka">AKA-Yvette</p>
+                        <p class="member-aka">"Yvette"</p>
                         <p class="member-instrument">2nd Cornet</p>
                         <p class="member-about">Contributes graceful tone and excellent ensemble awareness
                             on stage.</p>
@@ -1059,7 +1059,7 @@
                                 alt="John Bright Kadenge"></div>
 
                         <h3>John Bright</h3>
-                        <p class="member-aka">AKA-Kadenge</p>
+                        <p class="member-aka">"Kadenge"</p>
                         <p class="member-instrument">Flugel Horn</p>
                         <p class="member-about">Contributes graceful tone and excellent ensemble awareness
                             on stage.</p>
@@ -1090,7 +1090,7 @@
                                 alt="Lawrence Wafula"></div>
 
                         <h3>Lawrence Wafula</h3>
-                        <p class="member-aka">AKA Lau</p>
+                        <p class="member-aka">"Lau"</p>
                         <p class="member-instrument">Hornist</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
@@ -1122,7 +1122,7 @@
                                 alt="Lawrence Wafula"></div>
 
                         <h3>Ibrahim Ali</h3>
-                        <p class="member-aka">AKA Ibrah</p>
+                        <p class="member-aka">"Ibrah"</p>
                         <p class="member-instrument">Baritone</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
@@ -1154,7 +1154,7 @@
                                 alt="Lawrence Wafula"></div>
 
                         <h3>Sam Mwikha</h3>
-                        <p class="member-aka">AKA Sam</p>
+                        <p class="member-aka">"Sam"</p>
                         <p class="member-instrument">Snare drum</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
@@ -1186,7 +1186,7 @@
                                 alt="Bradley Muhambe"></div>
 
                         <h3>Bradley Muhambe</h3>
-                        <p class="member-aka">AKA Brad</p>
+                        <p class="member-aka">"Brad"</p>
                         <p class="member-instrument">Drummer</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
@@ -1219,7 +1219,7 @@
                         </div>
 
                         <h3>Collins Kipkoech</h3>
-                        <p class="member-aka">AKA Mfalme</p>
+                        <p class="member-aka">"Mfalme"</p>
                         <p class="member-instrument">Trombonist/Drummer</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
@@ -1251,7 +1251,7 @@
                         </div>
 
                         <h3>Ian Senerwa</h3>
-                        <p class="member-aka">AKA Ian</p>
+                        <p class="member-aka">"Ian"</p>
                         <p class="member-instrument">Principal Conductor/Drummer</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing

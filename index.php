@@ -1326,7 +1326,7 @@
 
                     <!-- Event 1 -->
 
-                    <article class="event-card featured">
+                    <article class="event-card featured"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards.jpg'); background-size: cover; background-position: center;">
 
                         <div class="event-date">
                             <span class="day">23</span>
@@ -1362,7 +1362,7 @@
 
                     <!-- Event 2 -->
 
-                    <article class="event-card">
+                    <article class="event-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards 2.jpg'); background-size: cover; background-position: center;">
 
                         <div class="event-date">
                             <span class="day">01</span>
@@ -1398,7 +1398,7 @@
 
                     <!-- Event 3 -->
 
-                    <article class="event-card">
+                    <article class="event-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards 3.avif'); background-size: cover; background-position: center;">
 
                         <div class="event-date">
                             <span class="day">02</span>
@@ -1533,7 +1533,7 @@
                     <h2>Bring your talent and be part of the sound</h2>
                 </div>
                 <div class="join-grid">
-                    <div class="card join-card">
+                    <div class="card join-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/t-shirt.jpeg'); background-size: cover; background-position: center;">
                         <h3>Instruments Needed</h3>
                         <ul class="check-list">
                             <li>Solo Horn</li>
@@ -1542,18 +1542,18 @@
                             <li>Percussion</li>
                         </ul>
                     </div>
-                    <div class="card join-card">
+                    <div class="card join-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/sample 2.jpeg'); background-size: cover; background-position: center;">
                         <h3>Audition & Practice</h3>
                         <p>New members are welcome. Auditions are simple and friendly, with rehearsal
                             sessions held
                             regularly for skill development and teamwork.</p>
                     </div>
-                    <div class="card join-card">
+                    <div class="card join-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/logo.png'); background-size: cover; background-position: center;">
                         <h3>Requirements</h3>
                         <p>Passion for music, commitment to practice, and a willingness to grow with the
                             group.</p>
                     </div>
-                    <div class="card join-card">
+                    <div class="card join-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Blue dyke background.jpg'); background-size: cover; background-position: center;">
                         <h3>Why Join Us</h3>
                         <p>Grow your confidence, sharpen your discipline and perform with a team that values
                             excellence and community.</p>
@@ -1571,7 +1571,7 @@
                         delivered with heart, precision and passion.</p>
                 </div>
                 <div class="testimonial-grid">
-                    <article class="card testimonial-card">
+                    <article class="card testimonial-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Gate.jpeg'); background-size: cover; background-position: center;">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“The band brought a powerful, uplifting energy to our church event. Every piece felt polished
                             and memorable.”</p>
@@ -1580,7 +1580,7 @@
                             <span>Church Service Host</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card">
+                    <article class="card testimonial-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/t-shirt.jpeg'); background-size: cover; background-position: center;">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“Their sound was bold, rich and perfectly timed. They turned our celebration into something
                             truly special.”</p>
@@ -1589,7 +1589,7 @@
                             <span>Wedding Planner</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card">
+                    <article class="card testimonial-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/euphonium.jpeg'); background-size: cover; background-position: center;">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“Professional, disciplined and exciting. Blue Dyke made our parade feel larger than life.”
                         </p>
@@ -1598,7 +1598,7 @@
                             <span>Community Event Organizer</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card">
+                    <article class="card testimonial-card" style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Trumpet.jpg'); background-size: cover; background-position: center;">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“They were punctual, warm and incredibly organized. Our guests kept talking about the music
                             long after the event ended.”</p>
@@ -1705,7 +1705,7 @@
 
                     <!-- Contact Form -->
 
-                    <form class="contact-form" method="POST" action="#contact">
+                    <form class="contact-form" method="POST" action="#contact"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/sample 1.jpeg'); background-size: cover; background-position: center;">
                         <?php if ($contactStatus !== ''): ?>
                         <div class="contact-status <?= htmlspecialchars($contactStatus, ENT_QUOTES, 'UTF-8') ?>"
                             role="alert">

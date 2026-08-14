@@ -1746,7 +1746,7 @@
 
             <div class="container">
 
-                <div class="cta-card">
+                <div class="cta-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Blue dyke background.jpg'); background-size: cover; background-position: center;">
 
                     <span class="cta-tag">
                         Book Blue Dyke Brass Band

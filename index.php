@@ -1118,7 +1118,8 @@
                     </div>
                     <div class="card member-card baritone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/baritone.webp'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Ibrah Ali.jpeg"
+                                alt="Lawrence Wafula"></div>
 
                         <h3>Ibrahim Ali</h3>
                         <p class="member-aka">AKA Ibrah</p>
@@ -1149,9 +1150,10 @@
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/drums.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Sam.jpeg"
+                                alt="Lawrence Wafula"></div>
 
-                        <h3>Sam Munala</h3>
+                        <h3>Sam Mwikha</h3>
                         <p class="member-aka">AKA Sam</p>
                         <p class="member-instrument">Snare drum</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
@@ -1212,7 +1214,7 @@
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Bass\ trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/collo.jpg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/mfalme.jpeg"
                                 alt="Collins Kipkoech">
                         </div>
 

@@ -27,12 +27,28 @@ if (!is_array($payload)) {
 
 // Daraja sends the payment result to this same endpoint after the prompt is handled.
 if (isset($payload['Body']['stkCallback'])) {
+    $callback = $payload['Body']['stkCallback'];
+
+    $resultCode = $callback['ResultCode'] ?? null;
+    $resultDesc = $callback['ResultDesc'] ?? 'Unknown result';
+
     error_log(
         'MPESA CALLBACK: ' .
-        json_encode($payload['Body']['stkCallback'], JSON_UNESCAPED_SLASHES)
+        json_encode($callback, JSON_UNESCAPED_SLASHES)
     );
 
-    respond(true, 'Callback received.');
+    if ($resultCode === 0) {
+        error_log('MPESA PAYMENT SUCCESSFUL');
+
+        respond(true, 'Payment successful.');
+    }
+
+    error_log(
+        'MPESA PAYMENT FAILED: ' .
+        $resultCode . ' - ' . $resultDesc
+    );
+
+    respond(true, 'Payment failed or was cancelled.');
 }
 
 $amount = filter_var($payload['amount'] ?? null, FILTER_VALIDATE_INT);

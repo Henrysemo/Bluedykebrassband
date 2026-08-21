@@ -138,7 +138,40 @@ $stkResponse = requestJson(
 );
 
 if (($stkResponse['ResponseCode'] ?? null) !== '0') {
-    respond(false, $stkResponse['errorMessage'] ?? $stkResponse['ResponseDescription'] ?? 'M-Pesa could not start the payment.', 502);
+
+    $errorMessage = strtolower(
+        (string) (
+            $stkResponse['errorMessage']
+            ?? $stkResponse['ResponseDescription']
+            ?? ''
+        )
+    );
+
+    $errorCode = (string) ($stkResponse['errorCode'] ?? '');
+
+    // Merchant/PayBill is not configured or does not exist.
+    if (
+        str_contains($errorMessage, 'merchant does not exist') ||
+        $errorCode === '500.001.1001'
+    ) {
+        error_log(
+            'MPESA CONFIGURATION ERROR: ' .
+            json_encode($stkResponse, JSON_UNESCAPED_SLASHES)
+        );
+
+        respond(
+            false,
+            'M-Pesa payments are not configured yet. Please contact the band directly on 0718877448.',
+            503
+        );
+    }
+
+    // Other Daraja errors
+    respond(
+        false,
+        'M-Pesa payment could not be started. Please try again later.',
+        502
+    );
 }
 
 respond(true, 'Check your phone and enter your M-Pesa PIN to complete the support payment.');

@@ -27,7 +27,10 @@ if (!is_array($payload)) {
 
 // Daraja sends the payment result to this same endpoint after the prompt is handled.
 if (isset($payload['Body']['stkCallback'])) {
-    respond(true, 'Callback received.');
+    respond(
+        true,
+        json_encode($payload['Body']['stkCallback'], JSON_UNESCAPED_SLASHES)
+    );
 }
 
 $amount = filter_var($payload['amount'] ?? null, FILTER_VALIDATE_INT);

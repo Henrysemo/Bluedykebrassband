@@ -132,7 +132,7 @@ $stkResponse = requestJson(
         'PartyB' => $shortcode,
         'PhoneNumber' => $phone,
         'CallBackURL' => $callbackUrl,
-        'AccountReference' => 'BlueDyke',
+        'AccountReference' => getenv('MPESA_ACCOUNT_REFERENCE') ?: 'BlueDyke',
         'TransactionDesc' => 'Instrument',
     ], JSON_THROW_ON_ERROR)
 );

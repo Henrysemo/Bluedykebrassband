@@ -71,7 +71,7 @@
     <?php
     $contactStatus = '';
     $contactMessage = '';
-    $mpesaNumber = 'REQUEST FROM US';
+    $mpesaNumber = 'SUPPORT BLUE DYKE';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_name'])) {
         $to = 'bluedykebrass@gmail.com';

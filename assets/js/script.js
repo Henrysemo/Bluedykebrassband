@@ -1,18 +1,111 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const navClose = document.querySelector('.nav-close');
 
-    if (hamburger && navMenu) {
+    if (hamburger && navMenu && navOverlay) {
+        const closeNavigation = () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        };
+
+        const openNavigation = () => {
+            hamburger.classList.add('active');
+            navMenu.classList.add('active');
+            navOverlay.classList.add('active');
+            document.body.classList.add('nav-open');
+            hamburger.setAttribute('aria-expanded', 'true');
+        };
+
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                closeNavigation();
+            } else {
+                openNavigation();
+            }
         });
 
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
+        navOverlay.addEventListener('click', closeNavigation);
+        navClose?.addEventListener('click', closeNavigation);
+
+        document.querySelectorAll('.nav-section-link').forEach(link => {
+            link.addEventListener('click', event => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (!target) return;
+
+                event.preventDefault();
+                closeNavigation();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                window.history.replaceState(null, '', link.getAttribute('href'));
             });
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeNavigation();
+        });
+    }
+
+    document.querySelectorAll('.developer-heart').forEach(heart => {
+        heart.addEventListener('click', () => {
+            const isActive = heart.classList.toggle('active');
+            heart.setAttribute('aria-pressed', String(isActive));
+        });
+    });
+
+    document.querySelectorAll('.copy-button').forEach(button => {
+        button.addEventListener('click', async () => {
+            const target = document.getElementById(button.dataset.copyTarget);
+            if (!target || target.textContent.includes('X')) return;
+
+            if (!navigator.clipboard) return;
+
+            await navigator.clipboard.writeText(target.textContent.trim());
+            button.innerHTML = '<i class="fas fa-check"></i>';
+            button.setAttribute('aria-label', 'M-Pesa number copied');
+            window.setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-copy"></i>';
+                button.setAttribute('aria-label', 'Copy M-Pesa number');
+            }, 1800);
+        });
+    });
+
+    const donationForm = document.getElementById('donation-form');
+    const donationStatus = document.getElementById('donation-status');
+
+    if (donationForm && donationStatus) {
+        donationForm.addEventListener('submit', async event => {
+            event.preventDefault();
+            const submitButton = donationForm.querySelector('button[type="submit"]');
+            const formData = new FormData(donationForm);
+
+            donationStatus.className = 'donation-status';
+            donationStatus.textContent = 'Connecting to M-Pesa...';
+            submitButton.disabled = true;
+
+            try {
+                const response = await fetch('mpesa.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        amount: formData.get('amount'),
+                        phone: formData.get('phone')
+                    })
+                });
+                const result = await response.json();
+
+                donationStatus.className = `donation-status ${result.success ? 'success' : 'error'}`;
+                donationStatus.textContent = result.message || 'We could not start the payment. Please try again.';
+                if (result.success) donationForm.reset();
+            } catch (error) {
+                donationStatus.className = 'donation-status error';
+                donationStatus.textContent = 'The payment service is temporarily unavailable. Please try again.';
+            } finally {
+                submitButton.disabled = false;
+            }
         });
     }
 

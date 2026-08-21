@@ -223,7 +223,7 @@
                         <div class="hero-actions">
                             <a href="#book" class="btn btn-primary">Book the Band</a>
                             <a href="#events" class="btn btn-secondary">View Upcoming Events</a>
-                            <a href="#support" class="btn btn-secondary">Support Instruments</a>
+                            <a href="#support" class="btn btn-secondary">Support & CONTRIBUTION</a>
                         </div>
                         <div class="hero-stats">
 

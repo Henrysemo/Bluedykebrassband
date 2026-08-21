@@ -132,8 +132,8 @@ $stkResponse = requestJson(
         'PartyB' => $shortcode,
         'PhoneNumber' => $phone,
         'CallBackURL' => $callbackUrl,
-        'AccountReference' => 'Instruments Project',
-        'TransactionDesc' => 'Support for Blue Dyke instruments',
+        'AccountReference' => 'BlueDyke',
+        'TransactionDesc' => 'Instrument',
     ], JSON_THROW_ON_ERROR)
 );
 

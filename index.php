@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Dyke Brass Band |Brass Band in Eldoret,Kenya</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon new.ico">
-    
+
     <meta name="description"
         content="Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.">
     <meta name="author" content="Blue Dyke Brass Band">
@@ -16,10 +16,6 @@
         content="Blue Dyke Brassband, brass band Eldoret, brass performance Kenya, wedding band Eldoret, church brass band">
     <meta name="author" content="Blue Dyke Brassband">
     <meta name="robots" content="index, follow">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/futura-bk" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="canonical" href="https://bluedykebrassband.onrender.com/">
@@ -75,6 +71,7 @@
     <?php
     $contactStatus = '';
     $contactMessage = '';
+    $mpesaNumber = '0718 877 448';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_name'])) {
         $to = 'bluedykebrass@gmail.com';
@@ -115,6 +112,12 @@
     ?>
     <header class="navbar">
         <div class="container nav-wrapper">
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="site-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <a href="#home" class="brand">
                 <span class="brand-mark">
                     <img src="assets/images/logo.png" alt="Brass Band Logo">
@@ -124,21 +127,53 @@
                     <small>Eldoret · Kenya · Making Moments Musical</small>
                 </span>
             </a>
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav-menu">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#events">Events</a>
-                <a href="#repertoire">Repertoire</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#join">Join</a>
-                <a href="#book">Book</a>
-                <a href="#contact">Contact</a>
+            <nav class="nav-menu" id="site-navigation" aria-label="Main navigation">
+                <div class="drawer-header">
+                    <a href="#home" class="drawer-brand nav-section-link">
+                        <span class="brand-mark">
+                            <img src="assets/images/logo.png" alt="Blue Dyke Brass Band logo">
+                        </span>
+                        <span>
+                            <strong>Blue Dyke Brass Band</strong>
+                            <small>Eldoret · Kenya</small>
+                        </span>
+                    </a>
+                    <button class="nav-close" type="button" aria-label="Collapse navigation"
+                        title="Collapse navigation">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <a class="nav-section-link" href="#home"><i class="nav-icon fas fa-house"
+                        aria-hidden="true"></i>Home</a>
+                <a class="nav-section-link" href="#about"><i class="nav-icon fas fa-circle-info"
+                        aria-hidden="true"></i>About</a>
+                <a class="nav-section-link" href="#members"><i class="nav-icon fas fa-users"
+                        aria-hidden="true"></i>Members</a>
+                <a class="nav-section-link" href="#events"><i class="nav-icon fas fa-calendar-days"
+                        aria-hidden="true"></i>Events</a>
+                <a class="nav-section-link" href="#repertoire"><i class="nav-icon fas fa-music"
+                        aria-hidden="true"></i>Repertoire</a>
+                <a class="nav-section-link" href="#gallery"><i class="nav-icon fas fa-images"
+                        aria-hidden="true"></i>Gallery</a>
+                <a class="nav-section-link" href="#join"><i class="nav-icon fas fa-user-plus"
+                        aria-hidden="true"></i>Join</a>
+                <a class="nav-section-link" href="#support"><i class="nav-icon fas fa-hand-holding-heart"
+                        aria-hidden="true"></i>Support Us</a>
+                <a class="nav-section-link" href="#book"><i class="nav-icon fas fa-bookmark"
+                        aria-hidden="true"></i>Book</a>
+                <a class="nav-section-link" href="#contact"><i class="nav-icon fas fa-envelope"
+                        aria-hidden="true"></i>Contact</a>
+                <div class="drawer-developer">
+                    <span>Designed with <button class="developer-heart" type="button" aria-label="Show love"
+                            aria-pressed="false">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </button> for Blue Dyke Brass Band by</span>
+                    <a href="https://henry-portfolio-fawn.vercel.app" target="_blank" rel="noopener noreferrer">
+                        Henry Semo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </div>
             </nav>
+            <button class="nav-overlay" type="button" aria-label="Close navigation"></button>
         </div>
     </header>
 
@@ -188,6 +223,7 @@
                         <div class="hero-actions">
                             <a href="#book" class="btn btn-primary">Book the Band</a>
                             <a href="#events" class="btn btn-secondary">View Upcoming Events</a>
+                            <a href="#support" class="btn btn-secondary">Support Instruments</a>
                         </div>
                         <div class="hero-stats">
 
@@ -350,10 +386,10 @@
                     </h2>
 
                     <p class="section-subtitle">
-                           <strong>Blue Dyke Brass Band</strong> is a brass band based in
-    <strong>Eldoret, Kenya</strong>, bringing powerful live brass music
-    to weddings, church services, concerts, parades, graduations,
-    community celebrations and other special events.
+                        <strong>Blue Dyke Brass Band</strong> is a brass band based in
+                        <strong>Eldoret, Kenya</strong>, bringing powerful live brass music
+                        to weddings, church services, concerts, parades, graduations,
+                        community celebrations and other special events.
                     </p>
                 </div>
                 <div class="about-grid">
@@ -384,11 +420,11 @@
 
                         </p>
                         <p>
-    Our goal is to make every occasion memorable through energetic,
-    uplifting and professional brass performances. From community
-    celebrations and church services to major concerts and public
-    events, Blue Dyke Brass Band brings people together through music.
-</p>
+                            Our goal is to make every occasion memorable through energetic,
+                            uplifting and professional brass performances. From community
+                            celebrations and church services to major concerts and public
+                            events, Blue Dyke Brass Band brings people together through music.
+                        </p>
 
 
                         <div class="about-stats">
@@ -1326,7 +1362,8 @@
 
                     <!-- Event 1 -->
 
-                    <article class="event-card featured"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards.jpg'); background-size: cover; background-position: center;">
+                    <article class="event-card featured"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards.jpg'); background-size: cover; background-position: center;">
 
                         <div class="event-date">
                             <span class="day">23</span>
@@ -1362,7 +1399,8 @@
 
                     <!-- Event 2 -->
 
-                    <article class="event-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards 2.jpg'); background-size: cover; background-position: center;">
+                    <article class="event-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards 2.jpg'); background-size: cover; background-position: center;">
 
                         <div class="event-date">
                             <span class="day">01</span>
@@ -1398,7 +1436,8 @@
 
                     <!-- Event 3 -->
 
-                    <article class="event-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards 3.avif'); background-size: cover; background-position: center;">
+                    <article class="event-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards 3.avif'); background-size: cover; background-position: center;">
 
                         <div class="event-date">
                             <span class="day">02</span>
@@ -1442,10 +1481,10 @@
                 <div class="section-heading">
                     <p class="eyebrow">Music & Repertoire</p>
                     <h2>A rich sound for every moment</h2>
-                     <p class="section-subtitle">
-                       Our repertoire includes a wide range of brass music suitable
-    for church services, concerts, weddings, parades, graduations
-    and community celebrations.
+                    <p class="section-subtitle">
+                        Our repertoire includes a wide range of brass music suitable
+                        for church services, concerts, weddings, parades, graduations
+                        and community celebrations.
                     </p>
                 </div>
                 <div class="repertoire-grid">
@@ -1533,7 +1572,8 @@
                     <h2>Bring your talent and be part of the sound</h2>
                 </div>
                 <div class="join-grid">
-                    <div class="card join-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/t-shirt.jpeg'); background-size: cover; background-position: center;">
+                    <div class="card join-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/t-shirt.jpeg'); background-size: cover; background-position: center;">
                         <h3>Instruments Needed</h3>
                         <ul class="check-list">
                             <li>Solo Horn</li>
@@ -1542,18 +1582,21 @@
                             <li>Percussion</li>
                         </ul>
                     </div>
-                    <div class="card join-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/sample 2.jpeg'); background-size: cover; background-position: center;">
+                    <div class="card join-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/sample 2.jpeg'); background-size: cover; background-position: center;">
                         <h3>Audition & Practice</h3>
                         <p>New members are welcome. Auditions are simple and friendly, with rehearsal
                             sessions held
                             regularly for skill development and teamwork.</p>
                     </div>
-                    <div class="card join-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/logo.png'); background-size: cover; background-position: center;">
+                    <div class="card join-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/logo.png'); background-size: cover; background-position: center;">
                         <h3>Requirements</h3>
                         <p>Passion for music, commitment to practice, and a willingness to grow with the
                             group.</p>
                     </div>
-                    <div class="card join-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Blue dyke background.jpg'); background-size: cover; background-position: center;">
+                    <div class="card join-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Blue dyke background.jpg'); background-size: cover; background-position: center;">
                         <h3>Why Join Us</h3>
                         <p>Grow your confidence, sharpen your discipline and perform with a team that values
                             excellence and community.</p>
@@ -1571,7 +1614,8 @@
                         delivered with heart, precision and passion.</p>
                 </div>
                 <div class="testimonial-grid">
-                    <article class="card testimonial-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Gate.jpeg'); background-size: cover; background-position: center;">
+                    <article class="card testimonial-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Gate.jpeg'); background-size: cover; background-position: center;">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“The band brought a powerful, uplifting energy to our church event. Every piece felt polished
                             and memorable.”</p>
@@ -1580,7 +1624,8 @@
                             <span>Church Service Host</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/t-shirt.jpeg'); background-size: cover; background-position: center;">
+                    <article class="card testimonial-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/t-shirt.jpeg'); background-size: cover; background-position: center;">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“Their sound was bold, rich and perfectly timed. They turned our celebration into something
                             truly special.”</p>
@@ -1589,7 +1634,8 @@
                             <span>Wedding Planner</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/euphonium.jpeg'); background-size: cover; background-position: center;">
+                    <article class="card testimonial-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/euphonium.jpeg'); background-size: cover; background-position: center;">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“Professional, disciplined and exciting. Blue Dyke made our parade feel larger than life.”
                         </p>
@@ -1598,7 +1644,8 @@
                             <span>Community Event Organizer</span>
                         </div>
                     </article>
-                    <article class="card testimonial-card" style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Trumpet.jpg'); background-size: cover; background-position: center;">
+                    <article class="card testimonial-card"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Trumpet.jpg'); background-size: cover; background-position: center;">
                         <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
                         <p>“They were punctual, warm and incredibly organized. Our guests kept talking about the music
                             long after the event ended.”</p>
@@ -1607,6 +1654,72 @@
                             <span>Event Host</span>
                         </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-section section" id="support">
+            <div class="container">
+                <div class="support-layout">
+                    <div class="support-copy">
+                        <p class="eyebrow">Help Build The Sound</p>
+                        <h2>Put an instrument in the hands of a young musician.</h2>
+                        <p class="support-lead">
+                            Blue Dyke Brass Band is raising support to purchase and maintain instruments for our
+                            members.
+                            Your gift helps us keep music education, discipline and live performance alive in our
+                            community.
+                        </p>
+                        <div class="support-impact">
+                            <div><i class="fas fa-music"></i><span>More instruments for rehearsals</span></div>
+                            <div><i class="fas fa-wrench"></i><span>Repairs and maintenance</span></div>
+                            <div><i class="fas fa-people-group"></i><span>More young people reached</span></div>
+                        </div>
+                    </div>
+
+                    <div class="support-payment">
+                        <div class="support-payment-heading">
+                            <img class="mpesa-mark" src="assets/images/Mpesa-Logo.webp" alt="M-Pesa">
+                            <div>
+                                <p class="payment-label">Support via M-Pesa</p>
+                                <h3>Every contribution counts</h3>
+                            </div>
+                        </div>
+                        <p class="payment-note">Use the number below when sending your contribution. Please confirm the
+                            official number with the band before making your first donation.</p>
+                        <div class="mpesa-number-row">
+                            <strong
+                                id="mpesa-number"><?= htmlspecialchars($mpesaNumber, ENT_QUOTES, 'UTF-8') ?></strong>
+                            <button type="button" class="copy-button" data-copy-target="mpesa-number"
+                                aria-label="Copy M-Pesa number" title="Copy M-Pesa number">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <ol class="payment-steps">
+                            <li>Open M-Pesa and choose Send Money.</li>
+                            <li>Enter the band’s confirmed number and your amount.</li>
+                            <li>Use <strong>Instruments Project</strong> as the reference where available.</li>
+                        </ol>
+                        <form class="donation-form" id="donation-form">
+                            <div class="donation-inputs">
+                                <label>
+                                    <span>Amount (KES)</span>
+                                    <input type="number" name="amount" min="1" step="1" placeholder="e.g. 500" required>
+                                </label>
+                                <label>
+                                    <span>M-Pesa phone number</span>
+                                    <input type="tel" name="phone" inputmode="numeric" placeholder="0718 877 448"
+                                        required>
+                                </label>
+                            </div>
+                            <button class="btn btn-primary support-button" type="submit">
+                                <i class="fas fa-mobile-screen-button"></i> Send M-Pesa Prompt
+                            </button>
+                            <p class="donation-status" id="donation-status" role="status" aria-live="polite"></p>
+                        </form>
+                        <p class="payment-footnote">You will receive an M-Pesa prompt on your phone. Never share your
+                            M-Pesa PIN with anyone.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1705,7 +1818,8 @@
 
                     <!-- Contact Form -->
 
-                    <form class="contact-form" method="POST" action="#contact"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards.jpg'); background-size: cover; background-position: center;">
+                    <form class="contact-form" method="POST" action="#contact"
+                        style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards.jpg'); background-size: cover; background-position: center;">
                         <?php if ($contactStatus !== ''): ?>
                         <div class="contact-status <?= htmlspecialchars($contactStatus, ENT_QUOTES, 'UTF-8') ?>"
                             role="alert">
@@ -1746,7 +1860,8 @@
 
             <div class="container">
 
-                <div class="cta-card"  style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Blue dyke background.jpg'); background-size: cover; background-position: center;">
+                <div class="cta-card"
+                    style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Blue dyke background.jpg'); background-size: cover; background-position: center;">
 
                     <span class="cta-tag">
                         Book Blue Dyke Brass Band

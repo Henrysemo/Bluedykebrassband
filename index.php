@@ -879,7 +879,7 @@
 
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Alvin.jpeg" alt="Alvo"></div>
+                        <div class="member-avatar"><img src="assets/images/Member Images/Alvin.png" alt="Alvo"></div>
 
                         <h3>Alvin Mokiro</h3>
                         <p class="member-aka">"Alvo"</p>

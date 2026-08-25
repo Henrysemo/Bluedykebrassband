@@ -622,7 +622,7 @@
                     </div>
                     <div class="card member-card tuba-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/tuba.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Fabu.jpg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Fabu.png"
                                 alt="Fabregas Mahiji"></div>
                         <h3>Fabregas Mahiji</h3>
                         <p class="member-aka">"Fabu"</p>
@@ -685,7 +685,7 @@
                     </div>
                     <div class="card member-card euphonium-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/euphonium.jpeg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Tileh.jpg" alt="Henry Semo">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Tileh.png" alt="Henry Semo">
                         </div>
 
                         <h3>Henry Semo</h3>
@@ -717,7 +717,7 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Bass\ trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Tata.jpeg" alt="Shadrack Tata">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Tata.png" alt="Shadrack Tata">
                         </div>
 
                         <h3>Shadrack Tata</h3>
@@ -749,7 +749,7 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Bravo.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Bravo.png"
                                 alt="Bravin Amalicha"></div>
 
                         <h3>Bravin Amalicha</h3>
@@ -781,7 +781,7 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Carson.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Carson.png"
                                 alt="Carson Ogamba"></div>
 
                         <h3>Carson Ogamba</h3>
@@ -845,7 +845,7 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/phillip.jpg" alt="Ian Phillip">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Phillip.png" alt="Ian Phillip">
                         </div>
 
                         <h3>Ian Phillip</h3>
@@ -910,7 +910,7 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Ibrah Muna.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Ibrah_Muna.png"
                                 alt="Ibrahim Muna"></div>
 
                         <h3>Ibrahim Muna</h3>
@@ -942,7 +942,7 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Tony.jpeg" alt="Tony Luloka">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Tony.png" alt="Tony Luloka">
                         </div>
 
                         <h3>Tony Luloka</h3>
@@ -974,7 +974,7 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Granton.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Granton.png"
                                 alt="Granton Muchesia"></div>
 
                         <h3>Granton Muchesia</h3>
@@ -1006,12 +1006,12 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Stano.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Max.png"
                                 alt="Stanislaus Khaemba">
                         </div>
 
-                        <h3>Stanislaus Khaemba</h3>
-                        <p class="member-aka">"Stano" </p>
+                        <h3>Maxwell</h3>
+                        <p class="member-aka">"Max" </p>
                         <p class="member-instrument">1st Cornet</p>
                         <p class="member-about">Brings clarity and confidence to the melody line in every
                             public
@@ -1091,7 +1091,7 @@
                     </div>
                     <div class="card member-card horn-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Flugelhorn.webp'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Kadenge.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Kadenge.png"
                                 alt="John Bright Kadenge"></div>
 
                         <h3>John Bright</h3>
@@ -1154,7 +1154,7 @@
                     </div>
                     <div class="card member-card baritone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/baritone.webp'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Ibrah Ali.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Ibrah_Ali.png"
                                 alt="Lawrence Wafula"></div>
 
                         <h3>Ibrahim Ali</h3>
@@ -1186,7 +1186,7 @@
                     </div>
                     <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/drums.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Sam.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Sam.png"
                                 alt="Lawrence Wafula"></div>
 
                         <h3>Sam Mwikha</h3>

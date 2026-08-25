@@ -1314,7 +1314,7 @@
                         </div>
                     </div>
                     <div class="card member-card percussion-card">
-                        <div class="member-avatar"></div>
+                       <div class="member-avatar"><img src="assets/images/logo.png" alt="Ian Senerwa">
 
                         <h3>NEW MEMBER</h3>
                         <p class="member-aka">COULD BE YOU! Join Us Today!</p>

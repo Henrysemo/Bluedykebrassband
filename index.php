@@ -558,7 +558,7 @@
                     </div>
                     <div class="card member-card euphonium-card"
                         style="background-image: linear-gradient(135deg,rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/euphonium.jpeg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Alex.jpg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Alex.png"
                                 alt="DBM Alex Mkoyani"></div>
 
                         <h3>DBM Alex Mkoyani</h3>
@@ -590,7 +590,7 @@
                     </div>
                     <div class="card member-card tuba-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/tuba.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Kabitoh.jpg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Kabitoh.png"
                                 alt="Fortune Henry"></div>
 
                         <h3>Fortune Henry</h3>

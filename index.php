@@ -527,7 +527,7 @@
                 <div class="members-grid">
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/cornet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Sila.jpeg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Sila.png"
                                 alt="BM Silah Kihusa"></div>
                         <h3>BM Silah Kihusa</h3>
                         <p class="member-aka">"Sila"</p>

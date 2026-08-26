@@ -653,7 +653,7 @@
                     </div>
                     <div class="card member-card tuba-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/tuba.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Charity.jpeg" alt="Charity">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Charity.png" alt="Charity">
                         </div>
 
                         <h3>Charity</h3>
@@ -813,7 +813,7 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/benja.jpg"
+                        <div class="member-avatar"><img src="assets/images/Member Images/benja.png"
                                 alt="Benjamin Sigira"></div>
 
                         <h3>Benjamin Sigira</h3>
@@ -1028,7 +1028,7 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Trumpet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Obed.jpeg" alt="Obed Ndalu">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Obed.png" alt="Obed Ndalu">
                         </div>
 
                         <h3>Obed Ndalu</h3>
@@ -1121,13 +1121,13 @@
                         </div>
                     </div>
                     <div class="card member-card horn-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/baritone.webp'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Wafula.jpg"
-                                alt="Lawrence Wafula"></div>
+                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/euphonium.jpeg'); background-size: cover; background-position: center;">
+                        <div class="member-avatar"><img src="assets/images/logo.png"
+                                alt="Victor Vosoro"></div>
 
-                        <h3>Lawrence Wafula</h3>
-                        <p class="member-aka">"Lau"</p>
-                        <p class="member-instrument">Hornist</p>
+                        <h3>Victor Vosoro</h3>
+                        <p class="member-aka">"Victor"</p>
+                        <p class="member-instrument">Euphoniumist</p>
                         <p class="member-about">Supports the band with rich harmony, dedication and a warm
                             performing
                             style.</p>
@@ -1249,41 +1249,8 @@
                         </div>
                     </div>
                     <div class="card member-card percussion-card"
-                        style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Bass\ trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/mfalme.jpeg"
-                                alt="Collins Kipkoech">
-                        </div>
-
-                        <h3>Collins Kipkoech</h3>
-                        <p class="member-aka">"Mfalme"</p>
-                        <p class="member-instrument">Trombonist/Drummer</p>
-                        <p class="member-about">Supports the band with rich harmony, dedication and a warm
-                            performing
-                            style.</p>
-                        <div class="member-social">
-                            <a href="https://www.facebook.com/profile.php?id=61593338960381" target="_blank"
-                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/bluedykebrassband" target="_blank"
-                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-
-                            <a href="https://youtube.com/@bluedykebrassband" target="_blank" rel="noopener noreferrer"
-                                aria-label="Blue Dyke Brass Band on YouTube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-
-                            <a href="https://www.tiktok.com/@bluedykebrassband" target="_blank"
-                                rel="noopener noreferrer" aria-label="Blue Dyke Brass Band on TikTok">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card member-card percussion-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/Cards\ 2.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Ian.jpeg" alt="Ian Senerwa">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Ian.png" alt="Ian Senerwa">
                         </div>
 
                         <h3>Ian Senerwa</h3>

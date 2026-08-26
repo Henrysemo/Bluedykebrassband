@@ -813,7 +813,7 @@
                     </div>
                     <div class="card member-card trombone-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trombone.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/benja.png"
+                        <div class="member-avatar"><img src="assets/images/Member Images/Benja.png"
                                 alt="Benjamin Sigira"></div>
 
                         <h3>Benjamin Sigira</h3>

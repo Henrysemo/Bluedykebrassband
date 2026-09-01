@@ -1060,7 +1060,7 @@
                     </div>
                     <div class="card member-card cornet-card"
                         style="background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.9), rgba(2, 2, 2, 0.8)), url('assets/images/trumpet.jpg'); background-size: cover; background-position: center;">
-                        <div class="member-avatar"><img src="assets/images/Member Images/Yvette.jpeg" alt="Yvette">
+                        <div class="member-avatar"><img src="assets/images/Member Images/Yvette.png" alt="Yvette">
                         </div>
 
                         <h3>Yvette Mahiji</h3>

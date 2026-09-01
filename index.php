@@ -312,7 +312,7 @@
                             <i class="fas fa-calendar-alt"></i>
                         </div>
 
-                        <span class="highlight-label">NEXT EVENT</span>
+                        <span class="highlight-label">RECENT EVENT</span>
 
                         <h3>A Symphony Of Praise Concert</h3>
 
@@ -1319,7 +1319,7 @@
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Perfomances and Events</p>
-                    <h2>Upcoming events and special occasions</h2>
+                    <h2>Events and special occasions</h2>
                     <p class="section-subtitle">
                         Experience Blue Dyke Brass Band live. Join us as we bring inspiring music to communities across
                         Kenya.

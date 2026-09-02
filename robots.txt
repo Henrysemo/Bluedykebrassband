@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bluedykebrassband.onrender.com/sitemap.xml
+Sitemap: https://bluedykebrassband-f1q8.onrender.com/sitemap.xml

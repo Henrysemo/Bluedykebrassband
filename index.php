@@ -18,20 +18,20 @@
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="canonical" href="https://bluedykebrassband.onrender.com/">
+    <link rel="canonical" href="https://bluedykebrassband-f1q8.onrender.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Blue Dyke Brass Band">
     <meta property="og:title" content="Blue Dyke Brass Band | Brass Band in Eldoret, Kenya">
     <meta property="og:description"
         content="Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.">
-    <meta property="og:url" content="https://bluedykebrassband.onrender.com/">
-    <meta property="og:image" content="https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg">
+    <meta property="og:url" content="https://bluedykebrassband-f1q8.onrender.com/">
+    <meta property="og:image" content="https://bluedykebrassband-f1q8.onrender.com/assets/images/Gate.jpeg">
     <meta property="og:image:alt" content="Blue Dyke Brass Band in Eldoret, Kenya">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blue Dyke Brass Band | Brass Band in Eldoret, Kenya">
     <meta name="twitter:description"
         content="Blue Dyke Brass Band provides live brass music for weddings, church services, concerts, parades, graduations and community events in Eldoret and across Kenya.">
-    <meta name="twitter:image" content="https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg">
+    <meta name="twitter:image" content="https://bluedykebrassband-f1q8.onrender.com/assets/images/Gate.jpeg">
 
     <script type="application/ld+json">
     {
@@ -39,9 +39,9 @@
         "@type": "MusicGroup",
         "name": "Blue Dyke Brass Band",
         "alternateName": "Blue Dyke Brassband",
-        "url": "https://bluedykebrassband.onrender.com/",
-        "logo": "https://bluedykebrassband.onrender.com/assets/images/logo.png",
-        "image": "https://bluedykebrassband.onrender.com/assets/images/Gate.jpeg",
+        "url": "https://bluedykebrassband-f1q8.onrender.com/",
+        "logo": "https://bluedykebrassband-f1q8.onrender.com/assets/images/logo.png",
+        "image": "https://bluedykebrassband-f1q8.onrender.com/assets/images/Gate.jpeg",
         "description": "Blue Dyke Brass Band is a brass band based in Eldoret, Kenya, providing live music for weddings, church services, concerts, parades, graduations and community events.",
         "genre": [
             "Brass Band",
